@@ -1,0 +1,574 @@
+/* =========================================================
+   TANÉA GUESTHOUSE
+   RESPONSIVE
+========================================================= */
+
+
+/* =========================================================
+   14. TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    :root {
+        --side-padding: 5vw;
+    }
+
+
+    .nav-menu {
+        gap: 18px;
+    }
+
+
+    .experience-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .comfort-layout {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+
+    .discover-grid {
+        gap: 50px;
+    }
+
+
+    .room-showcase {
+        grid-template-columns: 1fr;
+    }
+
+
+    .room-image {
+        min-height: 500px;
+    }
+
+
+    .destination-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   15. MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    :root {
+        --side-padding: 6vw;
+    }
+
+
+    .section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+
+    .section-number {
+        top: 35px;
+    }
+
+
+    /* NAV — dipindah ke navbar.css (satu sumber kebenaran) */
+
+
+    /* JOURNEY */
+
+    .journey-line {
+        display: none;
+    }
+
+
+    /* HERO — aturan legacy dihapus: .hero-overlay versi gelap membuat hero
+       di HP hitam pekat (beda dari desktop) dan tagline tidak terbaca.
+       Hero sekarang diatur penuh oleh hero.css + fixes.css */
+
+
+    /* DISCOVER */
+
+    .section-intro {
+        margin-bottom: 55px;
+    }
+
+
+    .discover-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+
+    .discover-image {
+        height: 430px;
+    }
+
+
+    /* STAY */
+
+    .stay-heading {
+        flex-wrap: wrap;
+        gap: 30px;
+
+        margin-bottom: 55px;
+    }
+
+
+    .stay-heading > div:first-child {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+
+    .stay-info {
+        min-width: 100px;
+    }
+
+
+    .room-content {
+        padding: 45px 30px;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card-image {
+        height: 300px;
+    }
+
+
+    /* FACILITIES */
+
+    .facility-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .facility-item {
+        min-height: 80px;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 180px 180px;
+    }
+
+
+    .gallery-large {
+        grid-row: span 2;
+    }
+
+
+    .gallery-wide {
+        grid-column: span 2;
+    }
+
+
+    /* EXPLORE */
+
+    .explore-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .explore-heading > p:last-child {
+        width: 100%;
+    }
+
+
+    .map-placeholder {
+        height: 420px;
+    }
+
+
+    .destination-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .destination {
+        padding: 20px 15px;
+    }
+
+
+    .destination strong {
+        font-size: 18px;
+    }
+
+
+    /* BOOKING */
+
+    .booking-section {
+        min-height: 600px;
+    }
+
+
+    .booking-section h2 {
+        font-size: clamp(46px, 13vw, 70px);
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding-top: 75px;
+    }
+
+
+    .footer-info {
+        margin: 70px 0;
+
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   16. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 200px 200px 200px;
+    }
+
+
+    .gallery-large {
+        grid-row: auto;
+    }
+
+
+    .gallery-wide {
+        grid-column: auto;
+    }
+
+
+    .destination-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   TANÉA RESPONSIVE PATCH — TABLET, MOBILE & ROOM DETAIL
+   This block intentionally comes last to override legacy rules.
+   ========================================================= */
+
+html { -webkit-text-size-adjust: 100%; }
+body { min-width: 320px; overflow-x: clip; }
+img, video, iframe { max-width: 100%; }
+img { height: auto; }
+main, section, header, footer, .container { min-width: 0; }
+section[id] { scroll-margin-top: 86px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+p, h1, h2, h3, h4 { overflow-wrap: break-word; }
+
+/* Fluid global spacing and media safety */
+.section { padding-inline: var(--side-padding); }
+.story-editorial,
+.stay-container,
+.comfort-container,
+.service-container,
+.dining-container,
+.explore-container,
+.booking-content,
+.footer-inner { width: min(100% - 2 * var(--side-padding), 1320px); margin-inline: auto; }
+
+.story-visual, .story-image, .story-photo,
+.stay-room-image, .experience-item-image, .gallery-item,
+.comfort-item, .service-item, .dining-image {
+    min-width: 0;
+}
+.story-image img, .story-photo img, .story-visual img,
+.stay-room-image img, .experience-item-image img,
+.gallery-item img, .comfort-item img, .service-item img,
+.dining img {
+    display: block; max-width: 100%;
+}
+
+/* Tablet and compact laptops */
+@media (max-width: 1180px) {
+    .experience-content { width: min(100% - 100px, 900px); }
+    .experience-items { gap: 14px; }
+    .experience-item { min-width: 0; }
+    .story-row { column-gap: clamp(24px, 4vw, 52px); }
+    .story-row-02, .story-row-04 { padding-left: 0; }
+    .story-row-03 { padding-right: 0; }
+    .story-intro { padding-right: 20px; }
+    .comfort-grid { gap: 18px; }
+    .footer-info { gap: 24px; }
+}
+
+/* Tablet: portrait and landscape */
+@media (max-width: 1100px) {
+    :root { --side-padding: clamp(22px, 5vw, 42px); }
+
+    .hero { height: 100svh; min-height: 560px; }
+    .hero-brand { width: min(84vw, 620px); }
+    .hero-main-logo { max-width: 100%; }
+    .hero-tagline { max-width: 80vw; }
+
+    .discover-section { padding: 70px var(--side-padding) 80px; }
+    .story-editorial { width: 100%; }
+    .story-row {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        min-height: 0;
+        column-gap: 28px;
+        row-gap: 26px;
+        padding: 28px 0 !important;
+    }
+    .story-intro { padding-right: 0; }
+    .story-description { max-width: none; padding: 0; }
+    .story-description h3 { font-size: clamp(32px, 5vw, 48px); }
+    .story-visual, .story-image { min-width: 0; }
+    .story-photo { width: 100%; }
+
+    .experience-intro-area {
+        height: auto;
+        min-height: 0;
+        padding: 70px var(--side-padding) 56px;
+    }
+    .experience-slogan {
+        margin: 0;
+        transform: none;
+        font-size: clamp(34px, 5.6vw, 52px);
+    }
+    .experience-slogan-text {
+        width: min(100%, 650px);
+        max-width: 100%;
+        font-size: clamp(15px, 2vw, 19px);
+    }
+    .experience-ornament { top: auto; bottom: -24px; right: 0; width: clamp(100px, 22vw, 190px); opacity: .55; }
+    .experience { height: auto; min-height: 620px; margin-top: 0; }
+    .experience-index { display: none; }
+    .experience-content {
+        width: min(100% - 2 * var(--side-padding), 760px);
+        margin-inline: auto;
+        padding: 68px 0 72px;
+    }
+    .experience-heading { font-size: clamp(34px, 5.4vw, 48px); line-height: 1.12; }
+    .experience-intro { max-width: 620px; }
+    .experience-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .experience-item { width: 100%; min-width: 0; }
+    .experience-item-image { width: 100%; }
+
+    .stay { padding: 70px var(--side-padding) 80px; }
+    .stay-header { gap: 24px; }
+    .stay-content { width: min(100%, 720px); }
+    .stay-ornament { width: 42vw; max-width: 420px; height: auto; max-height: 360px; top: -35px; opacity: .7; }
+    .stay-rooms { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 16px; }
+    .stay-room-card:last-child:nth-child(odd) { grid-column: 1 / -1; width: min(100%, calc(50% - 8px)); justify-self: center; }
+
+    .comfort-layout { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 36px; }
+    .comfort-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .service-container, .dining-container { width: min(100% - 2 * var(--side-padding), 1320px); }
+    .moments-section, .comfort, .service, .dining, .explore-section, .booking-section { padding-inline: var(--side-padding); }
+    .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(180px, 28vw)); }
+    .gallery-large { grid-row: span 2; }
+    .gallery-wide { grid-column: span 1; }
+    .explore-heading { gap: 24px; }
+    .map-placeholder { height: clamp(300px, 50vw, 480px); }
+    .destination-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .booking-section { min-height: 560px; padding-block: 80px; }
+    .footer { padding: 72px var(--side-padding) 28px; }
+    .footer-info { margin: 55px 0 65px; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    :root { --side-padding: 22px; }
+
+    .hero { min-height: 580px; height: 100svh; }
+    .hero-brand { width: calc(100% - 44px); }
+    .hero-main-logo { width: 100%; }
+    .hero-tagline { max-width: 90%; font-size: clamp(12px, 3.5vw, 15px); }
+    .hero-photo-marquee { max-width: 100%; overflow: hidden; }
+    .hero-photo-track { gap: 10px; }
+    .marquee-photo { flex: 0 0 clamp(115px, 35vw, 160px); }
+    .hero-scroll { display: none; }
+
+    .discover-section { padding: 56px var(--side-padding) 64px; }
+    .story-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        padding: 28px 0 !important;
+        margin: 0 !important;
+    }
+    .story-row-01 { padding-top: 0 !important; }
+    .story-row .story-intro,
+    .story-row .story-description,
+    .story-row .story-visual,
+    .story-row .story-image { width: 100%; max-width: none; }
+    .story-row .story-visual { order: 1; }
+    .story-row .story-description { order: 2; }
+    .story-intro-text, .story-description p { font-size: 14px; line-height: 1.8; text-align: left; }
+    .story-description h3 { margin-bottom: 14px; font-size: clamp(32px, 9vw, 44px); }
+    .story-index { margin-bottom: 12px; }
+    .story-photo { max-height: 380px; object-fit: cover; }
+    .story-caption { font-size: 11px; }
+
+    .experience-intro-area { padding: 56px var(--side-padding) 46px; }
+    .experience-slogan { font-size: clamp(32px, 9vw, 42px); line-height: 1.15; }
+    .experience-slogan-text { margin-top: 14px; font-size: 14px; line-height: 1.75; }
+    .experience-ornament { width: 110px; bottom: -12px; }
+    .experience { min-height: 0; }
+    .experience-content { width: calc(100% - 44px); padding: 54px 0 58px; }
+    .experience-heading { margin-bottom: 16px; font-size: clamp(30px, 8.2vw, 39px); }
+    .experience-intro { font-size: 13px; line-height: 1.75; }
+    .experience-items { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    .experience-item { display: grid; grid-template-columns: minmax(0, 1fr); }
+    .experience-item-image { height: clamp(210px, 62vw, 300px); }
+    .experience-item-title { font-size: 13px; }
+    /* panel detail: diatur penuh oleh experience.css (aturan lama dihapus karena bentrok) */
+
+    .stay { padding: 58px var(--side-padding) 64px; }
+    .stay-header { display: block; margin-bottom: 26px; }
+    .stay-content { width: 100%; }
+    .stay-content .section-label { font-size: 11px; }
+    .stay-content h2 { font-size: clamp(34px, 9vw, 46px); }
+    .stay-content > p { font-size: 14px; line-height: 1.8; }
+    .stay-ornament { top: -12px; right: -20px; width: 45vw; max-width: 210px; max-height: 190px; opacity: .34; }
+    .stay-rooms { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+    .stay-room-card:last-child:nth-child(odd) { grid-column: auto; width: 100%; }
+    .stay-room-image { height: auto; aspect-ratio: 4 / 3; }
+    .stay-room-info { padding: 18px 0; }
+    .stay-room-info h3 { font-size: 25px; }
+
+    .comfort, .service, .moments-section, .dining, .explore-section, .booking-section {
+        padding-top: 58px;
+        padding-bottom: 62px;
+    }
+    .comfort-layout { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+    .comfort-heading { max-width: none; }
+    .comfort-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+    .comfort-item { min-height: 76px; }
+    .service-heading { margin-bottom: 28px; }
+    .service-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+    .service-item { min-width: 0; }
+    .dining-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .dining-content { width: 100%; }
+    .dining-image { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+    .gallery-grid { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; gap: 10px; }
+    .gallery-item { grid-column: auto !important; grid-row: auto !important; height: auto; aspect-ratio: 4 / 3; }
+    .gallery-item.gallery-large { aspect-ratio: 3 / 4; }
+    .gallery-item img, .gallery-item .image-placeholder { width: 100%; height: 100%; object-fit: cover; }
+
+    .explore-heading { display: block; margin-bottom: 28px; }
+    .explore-heading > p:last-child { width: 100%; margin-top: 16px; }
+    .map-placeholder { height: 300px; }
+    .map-marker { max-width: 80%; text-align: center; font-size: 15px; }
+    .destination-list { grid-template-columns: minmax(0, 1fr); }
+    .destination { padding: 18px 8px; }
+
+    .booking-section { min-height: 0; }
+    .booking-content { width: 100%; }
+    .booking-section h2 { margin-bottom: 22px; font-size: clamp(39px, 11vw, 58px); line-height: 1.05; }
+    .booking-section p { font-size: 14px; line-height: 1.8; }
+    .btn-booking { max-width: 100%; gap: 14px; padding: 15px 18px; font-size: 9px; }
+
+    .footer { padding: 58px var(--side-padding) 24px; }
+    .footer-brand h2 { font-size: clamp(42px, 12vw, 58px); }
+    .footer-info { grid-template-columns: minmax(0, 1fr); gap: 22px; margin: 40px 0 48px; }
+    .footer-bottom { align-items: flex-start; font-size: 10px; }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    :root { --side-padding: 17px; }
+    .experience-content { width: calc(100% - 34px); }
+    .experience-item-image { height: 205px; }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* =========================================================
+   FINAL POLISH — CONSISTENT SECTION RHYTHM & TYPOGRAPHY
+   ========================================================= */
+:root { --section-space: clamp(56px, 6.5vw, 88px); }
+.experience { padding-top: clamp(112px, 11vw, 145px); padding-bottom: var(--section-space); }
+.stay { padding-top: clamp(58px, 6vw, 76px); padding-bottom: var(--section-space); }
+.moments { padding-top: 0; padding-bottom: var(--section-space); }
+.explore { padding-top: var(--section-space); padding-bottom: var(--section-space); }
+.reviews-section { padding-top: var(--section-space); padding-bottom: var(--section-space); }
+.booking-section { padding: var(--section-space) 24px; min-height: 0; }
+
+/* Shared editorial title rhythm: About is the reference */
+.experience-header h2,
+.stay-content h2,
+.moments-heading h2,
+.reviews-heading,
+.booking-section h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -.035em;
+    line-height: 1.12;
+}
+.experience-header h2,
+.moments-heading h2,
+.reviews-heading,
+.booking-section h2 { font-size: clamp(36px, 4.3vw, 58px); }
+.experience-header p,
+.stay-content > p,
+.reviews-description,
+.booking-section p {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.85;
+    font-weight: 400;
+}
+.experience-header h2 { margin-bottom: 20px; }
+.experience-header p { max-width: 760px; margin-inline: auto; }
+.stay-header { margin-bottom: clamp(28px, 3.5vw, 42px); }
+.moments-heading { margin-bottom: clamp(28px, 4vw, 42px); }
+
+/* A calm fade reveal, matching the About section */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .8s ease, transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal.is-visible { opacity: 1; transform: none; transition: none; }
+}
+@media (max-width: 600px) {
+    .experience { padding-top: 100px; padding-bottom: 54px; }
+    .stay { padding-top: 48px; padding-bottom: 58px; }
+    .moments { padding-bottom: 52px; }
+    .explore, .reviews-section, .booking-section { padding-top: 54px; padding-bottom: 54px; }
+}

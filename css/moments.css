@@ -1,0 +1,272 @@
+
+/* =================================================
+   TANÉA GUESTHOUSE
+   MOMENTS — CLEAN INSTAGRAM GALLERY
+   ================================================= */
+
+
+/* =================================================
+   01. SECTION
+   ================================================= */
+
+.moments {
+    width: 100%;
+    padding: 5px 0 60px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.moments-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* =================================================
+   02. HEADING
+   ================================================= */
+
+.moments-heading {
+    text-align: center;
+    padding: 0 24px;
+    margin-bottom: 42px;
+}
+
+.moments-heading .section-label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.moments-heading h2 {
+    margin: 0;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.moments-instagram-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: #65705e;
+    font-size: 12px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.moments-instagram-link:hover {
+    opacity: 0.65;
+}
+
+
+/* =================================================
+   03. PHOTO GALLERY
+   ================================================= */
+
+.moments-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    width: 100%;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =================================================
+   04. PHOTO ITEM
+   ================================================= */
+
+.moments-photo {
+    position: relative;
+    display: block;
+
+    width: 100%;
+    height: clamp(180px, 25vw, 320px);
+
+    overflow: hidden;
+    background: #e8e3d9;
+
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+/* IMAGE */
+
+.moments-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* HOVER IMAGE */
+
+.moments-photo:hover img {
+    transform: scale(1.035);
+}
+
+
+/* =================================================
+   05. HOVER OVERLAY
+   ================================================= */
+
+.moments-photo-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    padding: 20px;
+
+    background: linear-gradient(
+        to top,
+        rgba(20, 25, 20, 0.78) 0%,
+        rgba(20, 25, 20, 0.25) 45%,
+        rgba(20, 25, 20, 0) 100%
+    );
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+
+/* OVERLAY TEXT */
+
+.moments-photo-overlay span {
+    color: #fff;
+
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+}
+
+
+/* SHOW ON HOVER */
+
+.moments-photo:hover .moments-photo-overlay {
+    opacity: 1;
+}
+
+
+/* =================================================
+   06. TABLET
+   ================================================= */
+
+@media (max-width: 900px) {
+
+    .moments {
+        padding: 65px 0 45px;
+    }
+
+    .moments-heading {
+        margin-bottom: 32px;
+    }
+
+    .moments-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .moments-photo {
+        height: clamp(180px, 32vw, 280px);
+    }
+
+}
+
+
+/* =================================================
+   07. MOBILE
+   ================================================= */
+
+@media (max-width: 560px) {
+
+    .moments {
+        padding: 55px 0 35px;
+    }
+
+    .moments-heading {
+        padding: 0 16px;
+        margin-bottom: 26px;
+    }
+
+    .moments-heading h2 {
+        font-size: clamp(29px, 7vw, 38px);
+    }
+
+    .moments-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+    }
+
+    .moments-photo {
+        height: clamp(140px, 42vw, 210px);
+    }
+
+    .moments-photo-overlay {
+        padding: 10px;
+    }
+
+    .moments-photo-overlay span {
+        font-size: 10px;
+    }
+
+}
+
+
+/* INSTAGRAM EMBED — CLIENT PREVIEW */
+
+.moments-embed-preview {
+    width: 100%;
+    max-width: 540px;
+    margin: 48px auto 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.moments-embed-label {
+    margin: 0 0 16px;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #65705e;
+}
+
+.moments-embed-preview .instagram-media {
+    width: 100% !important;
+    max-width: 540px !important;
+    min-width: 0 !important;
+}
+
+/* =========================================================
+   MOMENTS AT TANÉA — TITLE TYPOGRAPHY
+   ========================================================= */
+
+.moments-heading h2 {
+    font-family: "Quicksand", sans-serif !important;
+    font-size: clamp(38px, 4vw, 58px) !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+
+    line-height: 1.12;
+    letter-spacing: 0.20em !important;
+    text-align: center;
+
+    color: #80664e !important;
+    opacity: 0.60;
+}

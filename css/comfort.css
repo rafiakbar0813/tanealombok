@@ -1,0 +1,73 @@
+/* =========================================================
+   TANÉA GUESTHOUSE
+   COMFORT
+========================================================= */
+
+
+/* =========================================================
+   09. COMFORT / FACILITIES
+========================================================= */
+
+.comfort-section {
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+
+.comfort-section .eyebrow {
+    color: #766e60;
+}
+
+
+.comfort-layout {
+    max-width: var(--container);
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 120px;
+}
+
+
+.comfort-heading {
+    max-width: 450px;
+}
+
+
+.comfort-heading > p:last-child {
+    margin-top: 35px;
+
+    font-size: 13px;
+    color: #676156;
+}
+
+
+.facility-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.facility-item {
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    border-top: 1px solid var(--line-dark);
+}
+
+
+.facility-item span {
+    font-size: 9px;
+    color: #918978;
+}
+
+
+.facility-item strong {
+    font-size: 12px;
+    font-weight: 500;
+}

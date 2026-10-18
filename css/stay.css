@@ -1,0 +1,660 @@
+/* =========================================================
+   TANÉA GUESTHOUSE
+   ROOM / STAY — EDITORIAL TYPOGRAPHY
+   ========================================================= */
+
+
+/* =========================================================
+   01. SECTION BASE
+   ========================================================= */
+
+.stay {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    padding: 64px 4.25vw 100px;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    color: #262720;
+}
+
+.stay-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 1440px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   02. HEADER LAYOUT
+   ========================================================= */
+
+.stay-header {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 24px;
+}
+
+.stay-content {
+    position: relative;
+    z-index: 2;
+
+    width: 72%;
+    max-width: 850px;
+}
+
+
+/* =========================================================
+   03. EYEBROW / SECTION LABEL
+   ========================================================= */
+
+.stay-content .section-label {
+    display: block;
+
+    margin: 0 0 17px;
+
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+    line-height: 1.7;
+
+    text-transform: uppercase;
+
+    color: #65705b;
+}
+
+
+/* =========================================================
+   04. MAIN HEADING
+   ========================================================= */
+
+.stay-content h2 {
+    margin: 0 0 15px;
+
+    font-family: var(--font-serif);
+    font-size: clamp(42px, 4.2vw, 56px);
+    font-weight: 400;
+
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+
+    color: #262720;
+}
+
+.stay-content h2 em {
+    font-style: italic;
+}
+
+
+/* =========================================================
+   05. INTRODUCTION
+   ========================================================= */
+
+.stay-content > p {
+    max-width: 720px;
+
+    margin: 0;
+
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.85;
+    letter-spacing: 0;
+
+    color: #56574e;
+}
+
+
+/* =========================================================
+   06. BOTANICAL ORNAMENT
+   ========================================================= */
+
+.stay-ornament {
+    position: absolute;
+
+    top: -85px;
+    right: 0;
+
+    width: 580px;
+    height: 440px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+.stay-ornament img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: top right;
+
+    opacity: 0.30;
+}
+
+
+/* =========================================================
+   07. ROOM GRID
+   ========================================================= */
+
+.stay-rooms {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    width: 100%;
+    margin: 0;
+}
+
+.stay-room-card {
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   08. ROOM IMAGE
+   ========================================================= */
+
+.stay-room-image {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: #e5dcc5;
+}
+
+.stay-room-image .stay-room-link {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.stay-room-image .stay-room-link img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.stay-room-image .stay-room-link:hover img {
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   09. ROOM IMAGE OVERLAY
+   ========================================================= */
+
+.stay-room-image .stay-room-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 5;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        to top,
+        rgba(25, 31, 25, 0.48) 0%,
+        rgba(25, 31, 25, 0.12) 45%,
+        rgba(25, 31, 25, 0) 100%
+    );
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+    pointer-events: none;
+}
+
+.stay-room-image .stay-room-view {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+
+    color: #fff;
+
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+
+    opacity: 0;
+    transform: translateY(8px);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+.stay-room-image .stay-room-link:hover .stay-room-overlay,
+.stay-room-image .stay-room-link:focus-visible .stay-room-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.stay-room-image .stay-room-link:hover .stay-room-view,
+.stay-room-image .stay-room-link:focus-visible .stay-room-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Touchscreen: keep room link discoverable */
+
+@media (hover: none) {
+    .stay-room-image .stay-room-overlay {
+        opacity: 1;
+        visibility: visible;
+
+        background: linear-gradient(
+            to top,
+            rgba(25, 31, 25, 0.52) 0%,
+            rgba(25, 31, 25, 0) 55%
+        );
+    }
+
+    .stay-room-image .stay-room-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   10. ROOM INFORMATION
+   ========================================================= */
+
+.stay-room-info {
+    padding-top: 15px;
+}
+
+.stay-room-info h3 {
+    margin: 0;
+
+    font-family: var(--font-serif);
+    font-size: clamp(21px, 2vw, 26px);
+    font-weight: 400;
+
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+
+    color: #262720;
+}
+
+
+/* =========================================================
+   11. ROOM META
+   ========================================================= */
+
+.stay-room-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 400;
+
+    letter-spacing: 0;
+    line-height: 1.6;
+
+    color: #65705b;
+}
+
+.stay-room-meta span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    white-space: nowrap;
+}
+
+.stay-room-meta i,
+.stay-room-meta svg {
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    stroke-width: 1.5;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   12. ROOM DESCRIPTION
+   ========================================================= */
+
+.stay-room-info > p {
+    max-width: 360px;
+
+    margin: 12px 0 0;
+
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    color: #56574e;
+}
+
+
+/* =========================================================
+   13. SECTION FOOTER LINK
+   ========================================================= */
+
+.stay-footer {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 34px;
+}
+
+.stay-footer .text-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid rgba(38, 39, 32, 0.4);
+
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #26372b;
+}
+
+.stay-footer .text-link span {
+    transition: transform 0.3s ease;
+}
+
+.stay-footer .text-link:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   14. TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .stay {
+        padding: 58px 4vw 80px;
+    }
+
+    .stay-header {
+        gap: 24px;
+        margin-bottom: 22px;
+    }
+
+    .stay-content {
+        width: 80%;
+    }
+
+    .stay-content .section-label {
+        font-size: 9px;
+        margin-bottom: 14px;
+    }
+
+    .stay-content h2 {
+        font-size: clamp(38px, 5vw, 46px);
+        margin-bottom: 13px;
+    }
+
+    .stay-content > p {
+        max-width: 620px;
+        font-size: 12px;
+        line-height: 1.85;
+    }
+
+    .stay-ornament {
+        top: -55px;
+        width: 420px;
+        height: 340px;
+    }
+
+    .stay-rooms {
+        gap: 14px;
+    }
+
+    .stay-room-info {
+        padding-top: 13px;
+    }
+
+    .stay-room-info h3 {
+        font-size: clamp(19px, 2.7vw, 23px);
+    }
+
+    .stay-room-meta {
+        gap: 9px;
+        font-size: 9px;
+    }
+
+    .stay-room-meta i,
+    .stay-room-meta svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+/* =========================================================
+   15. MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .stay {
+        padding: 46px 20px 62px;
+    }
+
+    .stay-header {
+        display: block;
+        margin-bottom: 23px;
+    }
+
+    .stay-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .stay-content .section-label {
+        max-width: 100%;
+
+        margin-bottom: 13px;
+
+        font-size: 9px;
+        letter-spacing: 0.12em;
+        line-height: 1.7;
+    }
+
+    .stay-content h2 {
+        margin-bottom: 13px;
+
+        font-size: clamp(34px, 9vw, 42px);
+        line-height: 1.12;
+        letter-spacing: -0.035em;
+    }
+
+    .stay-content > p {
+        max-width: 100%;
+
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .stay-ornament {
+        top: -25px;
+        right: -45px;
+
+        width: 250px;
+        height: 230px;
+
+        opacity: 0.75;
+    }
+
+    .stay-ornament img {
+        opacity: 0.22;
+    }
+
+    .stay-rooms {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .stay-room-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .stay-room-info {
+        padding-top: 12px;
+    }
+
+    .stay-room-info h3 {
+        font-size: 23px;
+    }
+
+    .stay-room-meta {
+        gap: 12px;
+        margin-top: 9px;
+
+        font-size: 10px;
+    }
+
+    .stay-room-meta i,
+    .stay-room-meta svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .stay-room-info > p {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    .stay-footer {
+        margin-top: 28px;
+    }
+}
+
+
+/* =========================================================
+   16. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .stay {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .stay-content h2 {
+        font-size: 33px;
+    }
+
+    .stay-room-meta {
+        gap: 9px;
+        font-size: 9px;
+    }
+
+    .stay-room-image .stay-room-overlay {
+        padding: 13px;
+    }
+}
+
+/* =========================================================
+   ROOMS — TITLE TYPOGRAPHY
+   ========================================================= */
+
+.stay-content h2 {
+    font-family: "Quicksand", sans-serif !important;
+    font-size: clamp(38px, 4vw, 58px) !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+
+    line-height: 1.12;
+    letter-spacing: 0.20em !important;
+
+    color: #80664e !important;
+    opacity: 0.60;
+}

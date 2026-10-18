@@ -1,0 +1,1992 @@
+/* =========================================================
+   TANÉA GUESTHOUSE — EXPERIENCE
+   CLEAN CONSOLIDATED STYLESHEET
+   ========================================================= */
+
+/* =========================
+   1. EXPERIENCE SECTION
+   ========================= */
+.experience {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    padding: 155px 6% 90px;
+    background: transparent;
+    color: #80664E;
+}
+
+.experience-container {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Decorative botanical ornament behind the section header */
+.experience-container::after {
+    content: "";
+    position: absolute;
+    top: -180px;
+    right: -165px;
+    z-index: 0;
+    width: 380px;
+    height: 350px;
+    background: url("../assets/ornaments/ornament-11.png") center / contain no-repeat;
+    opacity: 0.32;
+    pointer-events: none;
+}
+
+.experience-header {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.experience-eyebrow {
+    display: none;
+}
+
+.experience-header h2 {
+    width: 100%;
+    margin: 0;
+
+    color: #80664e;
+    font-family: "Quicksand", sans-serif;
+    font-size: clamp(38px, 4vw, 58px);
+    font-weight: 400;
+    font-style: normal;
+
+    line-height: 1.12;
+    letter-spacing: 0.30em;
+    text-align: center;
+    text-transform: none;
+    white-space: normal;
+
+    opacity: 0.60;
+}
+
+.experience-header > p {
+    width: 100%;
+    max-width: 860px;
+    margin: 20px auto 0;
+    color: #303426;
+    font-family: var(--font-sans, "DM Sans", sans-serif);
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.85;
+    letter-spacing: normal;
+    text-align: center;
+    opacity: 1;
+}
+
+/* =========================
+   2. EXPERIENCE CARDS
+   ========================= */
+.experience-items {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: clamp(16px, 2.2vw, 30px);
+}
+
+.experience-item {
+    position: relative;
+    display: block;
+    min-width: 0;
+    align-self: stretch;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.experience-item-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.82;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #d8d1bd;
+}
+
+.experience-item-image img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 600ms ease;
+}
+
+.experience-item-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to top,
+        rgba(20, 25, 18, 0.78) 0%,
+        rgba(20, 25, 18, 0.32) 38%,
+        rgba(20, 25, 18, 0.02) 75%
+    );
+    opacity: 0.32;
+    pointer-events: none;
+    transition: opacity 400ms ease, background 400ms ease;
+}
+
+.experience-item:hover .experience-item-image img {
+    transform: scale(1.045);
+}
+
+.experience-item:hover .experience-item-image::after,
+.experience-item:focus-visible .experience-item-image::after {
+    background: linear-gradient(
+        to top,
+        rgba(20, 25, 18, 0.92) 0%,
+        rgba(20, 25, 18, 0.52) 48%,
+        rgba(20, 25, 18, 0.12) 100%
+    );
+    opacity: 1;
+}
+
+.experience-card-number,
+.experience-item-number,
+.experience-index {
+    display: none !important;
+}
+
+.experience-card-arrow {
+    display: none !important;
+}
+
+.experience-item-content {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    pointer-events: none;
+}
+
+.experience-item-content h3,
+.experience-item-title {
+    margin: 0;
+    color: #fff;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(23px, 2.2vw, 32px);
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.28);
+    transform: translateY(12px);
+    transition: transform 350ms ease;
+}
+
+.experience-item-content p {
+    display: none;
+}
+
+.experience-item:hover .experience-item-content h3,
+.experience-item:focus-visible .experience-item-content h3 {
+    transform: translateY(0);
+}
+
+.experience-card-link {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    z-index: 4;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 8px 0;
+    color: #f1e9d2;
+    font-family: var(--font-sans, "DM Sans", sans-serif);
+    font-size: 0;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-decoration: none;
+    text-transform: none;
+    opacity: 0;
+    transform: translateY(8px);
+    animation: experienceViewMoreFade 700ms ease 300ms forwards;
+    pointer-events: none;
+}
+
+.experience-card-link::after {
+    content: "VIEW MORE";
+    font-size: 11px;
+}
+
+.experience-card-link span {
+    display: none !important;
+}
+
+.experience-item:hover .experience-card-link,
+.experience-item:focus-visible .experience-card-link {
+    color: #fff;
+}
+
+@keyframes experienceViewMoreFade {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.experience-item:focus-visible,
+.experience-detail-close:focus-visible,
+.experience-detail-contact:focus-visible {
+    outline: 2px solid #77764f;
+    outline-offset: 5px;
+}
+
+/* =========================
+   3. DETAIL PANEL + BACKDROP
+   ========================= */
+.experience-detail-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: rgba(15, 20, 15, 0.72);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 300ms ease, visibility 300ms ease;
+}
+
+.experience-detail-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.experience-detail {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    width: min(1040px, calc(100% - 48px));
+    max-height: min(760px, calc(100dvh - 48px));
+    overflow: auto;
+    border-radius: 14px;
+    background: #f5efdf;
+    box-shadow: 0 30px 100px #0003;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, -47%);
+    transition: opacity 300ms ease, transform 300ms ease, visibility 300ms ease;
+}
+
+.experience-detail.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+}
+
+body.experience-detail-active {
+    overflow: hidden;
+}
+
+body.experience-detail-active .experience {
+    position: relative;
+    z-index: 10000;
+}
+
+.experience-detail-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 5;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid #7a785c55;
+    border-radius: 50%;
+    background: #f5efdf;
+    color: #303426;
+    font-size: 27px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.experience-detail-visual {
+    position: relative;
+    min-width: 0;
+    min-height: 100%;
+    overflow: hidden;
+    background: #d8d1bd;
+}
+
+.experience-detail-visual > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    object-fit: cover;
+}
+
+.experience-detail-visual > span {
+    display: none !important;
+}
+
+/* Full-panel batik texture behind all detail information */
+.experience-detail-content {
+    position: relative;
+    isolation: isolate;
+    min-width: 0;
+    padding: clamp(30px, 4vw, 54px);
+    overflow: hidden;
+    background-color: #f5efdf;
+}
+
+.experience-detail-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("../assets/ornaments/batikL3.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 260px auto;
+    opacity: 0.16;
+    pointer-events: none;
+}
+
+.experience-detail-content > * {
+    position: relative;
+}
+
+.experience-detail-eyebrow {
+    display: block;
+    margin: 0 0 14px;
+    color: #77764f;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.experience-detail-content h3 {
+    max-width: 480px;
+    margin: 0 auto 14px;
+    color: #303426;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(30px, 3.1vw, 43px);
+    font-weight: 400;
+    line-height: 1.15;
+    text-align: center;
+}
+
+.experience-detail-description {
+    max-width: 560px;
+    margin: 0 auto 26px;
+    color: #747366;
+    font-size: 13px;
+    line-height: 1.85;
+    text-align: center;
+}
+
+/* =========================
+   4. PRICE LIST
+   ========================= */
+.experience-price-area,
+.experience-destination-area {
+    margin-top: 22px;
+}
+
+.experience-price-area[hidden],
+.experience-destination-area[hidden] {
+    display: none !important;
+}
+
+.experience-price-area h4,
+.experience-destination-area h4 {
+    margin: 0 0 12px;
+    color: #303426;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.experience-price-note {
+    margin: 0 0 14px;
+    color: #827e6b;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.experience-price-list {
+    border-top: 1px solid #9e977a55;
+}
+
+.experience-price-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px;
+    align-items: start;
+    padding: 12px 0;
+    border-bottom: 1px solid #9e977a55;
+    color: #303426;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.experience-price-row span:first-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.experience-price-row span:last-child {
+    color: #6f714f;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* =========================
+   5. ADVENTURE DESTINATION CARDS
+   ========================= */
+.experience-destinations {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    width: 100%;
+}
+
+.experience-destination {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #a69d7c55;
+    border-radius: 8px;
+    background: #f8f3e8;
+}
+
+.experience-destination img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #e5dfcf;
+}
+
+.experience-destination-info {
+    padding: 12px;
+}
+
+.experience-destination-info h5 {
+    margin: 0 0 6px;
+    color: #303426;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.experience-destination-info p {
+    margin: 0;
+    color: #777568;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* =========================
+   6. CONTACT BUTTON
+   ========================= */
+.experience-detail-contact {
+    display: flex;
+    width: fit-content;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 26px 0 0 auto;
+    padding: 0 20px;
+    border: 1px solid #77764f;
+    border-radius: 2px;
+    color: #3c4231;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 200ms ease, color 200ms ease;
+}
+
+.experience-detail-contact:hover {
+    background: #62694e;
+    color: #fff;
+}
+
+/* =========================
+   7. PANEL-SPECIFIC SIZING
+   ========================= */
+@media (min-width: 641px) {
+    /* Travel panel: fixed panel height, scrolling only in information column */
+    #experienceDetail[data-experience-type="travel"] {
+        height: min(632px, calc(100dvh - 48px));
+        max-height: calc(100dvh - 48px);
+        min-height: 0;
+        overflow: hidden;
+        grid-template-rows: minmax(0, 1fr);
+    }
+
+    #experienceDetail[data-experience-type="travel"] .experience-detail-visual {
+        min-height: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #experienceDetail[data-experience-type="travel"] .experience-detail-visual > img {
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+    }
+
+    #experienceDetail[data-experience-type="travel"] .experience-detail-content {
+        min-height: 0;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    #experienceDetail[data-experience-type="adventure"] {
+        width: min(1040px, calc(100% - 48px));
+        max-height: min(760px, calc(100dvh - 48px));
+    }
+
+    #experienceDetail[data-experience-type="adventure"] .experience-detail-visual > img {
+        height: 100%;
+        min-height: 520px;
+        object-fit: cover;
+    }
+}
+
+/* =========================
+   8. TABLET
+   ========================= */
+@media (max-width: 1024px) {
+    .experience .experience-header h2 {
+        font-size: clamp(34px, 4vw, 48px);
+        letter-spacing: 0.30em;
+    }
+}
+
+@media (max-width: 900px) {
+    .experience {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .experience-items {
+        gap: 20px;
+    }
+
+    .experience .experience-item-content {
+        padding: 20px 16px;
+    }
+
+    .experience .experience-item-content h3 {
+        font-size: clamp(20px, 2.5vw, 25px);
+    }
+
+    .experience-detail {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        width: min(760px, calc(100% - 32px));
+    }
+
+    .experience-detail-visual > img {
+        min-height: 460px;
+    }
+
+    .experience-detail-content {
+        padding: 30px 24px;
+    }
+
+    .experience .experience-header > p {
+        font-size: 15px;
+    }
+}
+
+/* =========================
+   9. MOBILE
+   ========================= */
+@media (max-width: 640px) {
+    .experience {
+        padding: 66px 22px;
+    }
+
+    .experience-container::after {
+        top: -20px;
+        right: 0;
+        width: 120px;
+        height: 150px;
+    }
+
+    .experience-header {
+        margin-bottom: 30px;
+    }
+
+    .experience .experience-header h2 {
+        font-size: clamp(24px, 6.6vw, 34px);
+        letter-spacing: 0.12em;
+        white-space: normal;
+    }
+
+    .experience .experience-header > p {
+        width: 100%;
+        margin-top: 14px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .experience-items {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .experience-item-image {
+        aspect-ratio: 1.08;
+        border-radius: 10px;
+    }
+
+    .experience-item-content {
+        padding: 24px 20px;
+    }
+
+    .experience-item-content h3,
+    .experience-item-title {
+        font-size: 28px;
+    }
+
+    .experience-card-link {
+        right: 20px;
+        bottom: 18px;
+    }
+
+    .experience-detail {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        max-height: 90dvh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-radius: 16px 16px 0 0;
+        transform: translateY(30px);
+    }
+
+    .experience-detail.is-open {
+        transform: translateY(0);
+    }
+
+    .experience-detail-visual > img {
+        width: 100%;
+        height: 240px;
+        min-height: 0;
+    }
+
+    .experience-detail-content {
+        padding: 26px 22px 30px;
+    }
+
+    .experience-detail-content::before {
+        background-size: 210px auto;
+        opacity: 0.14;
+    }
+
+    .experience-detail-content h3 {
+        padding-right: 28px;
+        font-size: 32px;
+    }
+
+    .experience-detail-description {
+        font-size: 12px;
+    }
+
+    .experience-destinations {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .experience-destination-info {
+        padding: 9px;
+    }
+
+    .experience-destination-info h5 {
+        font-size: 12px;
+    }
+
+    .experience-detail-close {
+        top: 12px;
+        right: 12px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .experience-detail-contact {
+        margin-top: 22px;
+    }
+}
+
+/* =========================
+   10. REDUCED MOTION
+   ========================= */
+@media (prefers-reduced-motion: reduce) {
+    .experience-item-image img,
+    .experience-item-image::after,
+    .experience-item-content h3,
+    .experience-detail,
+    .experience-detail-backdrop,
+    .experience-card-link span {
+        transition: none;
+    }
+
+    .experience-card-link {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .experience-item-content h3 {
+        transform: none;
+    }
+}
+
+/* =========================================
+   SPA & MASSAGE — TEXT READABILITY
+   ========================================= */
+
+/* Ornament dibuat lebih samar */
+#experienceDetail[data-experience-type="spa"]
+.experience-detail-content::before {
+    opacity: 0.08;
+}
+
+/* Nama brand kecil di atas judul */
+#experienceDetail[data-experience-type="spa"]
+.experience-detail-eyebrow {
+    color: #554635;
+}
+
+/* Judul utama */
+#experienceDetail[data-experience-type="spa"]
+.experience-detail-content h3 {
+    color: #30271e;
+}
+
+/* Deskripsi */
+#experienceDetail[data-experience-type="spa"]
+.experience-detail-description {
+    color: #554b3e;
+}
+
+/* Judul Treatment Menu */
+#experienceDetail[data-experience-type="spa"]
+.experience-price-area h4 {
+    color: #30271e;
+}
+
+/* Catatan harga */
+#experienceDetail[data-experience-type="spa"]
+.experience-price-note {
+    color: #554b3e;
+}
+
+/* Nama treatment */
+#experienceDetail[data-experience-type="spa"]
+.experience-price-row span:first-child {
+    color: #30271e;
+}
+
+/* Harga treatment */
+#experienceDetail[data-experience-type="spa"]
+.experience-price-row span:last-child {
+    color: #51462e;
+}
+
+/* Tombol Ask for Details */
+#experienceDetail[data-experience-type="spa"]
+.experience-detail-contact {
+    color: #30271e;
+    border-color: #6d6048;
+}
+
+
+/* =========================================
+   TOUR & TRAVEL — BATIK + FONT FINAL
+   ========================================= */
+
+/* Area informasi dan ornament */
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-content {
+    position: relative;
+    isolation: isolate;
+    background-color: #f5efdf;
+}
+
+/* Ornament memenuhi seluruh area informasi,
+   termasuk area bawah tombol */
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image: url("../assets/ornaments/batikL2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+/* Warna dan keterbacaan teks */
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-content h3 {
+    color: #30271e;
+}
+
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-eyebrow {
+    color: #554635;
+}
+
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-description {
+    color: #554b3e;
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+#experienceDetail[data-experience-type="travel"]
+.experience-price-area h4 {
+    color: #30271e;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+#experienceDetail[data-experience-type="travel"]
+.experience-price-note {
+    color: #554b3e;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+#experienceDetail[data-experience-type="travel"]
+.experience-price-row span:first-child {
+    color: #30271e;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+#experienceDetail[data-experience-type="travel"]
+.experience-price-row span:last-child {
+    color: #51462e;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-contact {
+    color: #30271e;
+    border-color: #6d6048;
+}
+
+/* =========================================
+   TOUR & TRAVEL — BATIK OPACITY FINAL
+   ========================================= */
+
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-content {
+    background-color: #f5efdf;
+
+    background-image:
+        linear-gradient(
+            rgba(245, 239, 223, 0.93),
+            rgba(245, 239, 223, 0.93)
+        ),
+        url("../assets/ornaments/batikL2.png");
+
+    background-position:
+        center top,
+        center top;
+
+    background-repeat:
+        no-repeat,
+        repeat-y;
+
+    background-size:
+        100% 100%,
+        100% auto;
+
+    background-blend-mode: normal, multiply;
+}
+
+/* Matikan ornament lama agar tidak double */
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-content::before {
+    content: none;
+}
+
+/* Matikan ornament lama agar tidak double */
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-content::before {
+    content: none;
+}
+
+/* =========================================
+   TOUR & TRAVEL — FONT WEIGHT
+   ========================================= */
+
+/* Judul utama */
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-content h3 {
+    font-weight: 500;
+}
+
+/* Label kecil di atas judul */
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-eyebrow {
+    font-weight: 600;
+}
+
+/* Deskripsi */
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-description {
+    font-weight: 500;
+}
+
+/* Judul bagian daftar harga */
+#experienceDetail[data-experience-type="travel"]
+.experience-price-area h4 {
+    font-weight: 700;
+}
+
+/* Nama destinasi atau aktivitas */
+#experienceDetail[data-experience-type="travel"]
+.experience-price-row span:first-child {
+    font-weight: 600;
+}
+
+/* Harga */
+#experienceDetail[data-experience-type="travel"]
+.experience-price-row span:last-child {
+    font-weight: 600;
+}
+
+/* Tombol kontak */
+#experienceDetail[data-experience-type="travel"]
+.experience-detail-contact {
+    font-weight: 600;
+}
+
+/* =========================================
+   ADVENTURE — SCROLL KOLOM INFORMASI
+   Samakan perilaku dengan Tour & Travel
+   ========================================= */
+
+@media (min-width: 641px) {
+
+    /* Panel tetap, tidak ikut scroll */
+    #experienceDetail[data-experience-type="adventure"] {
+        height: min(632px, calc(100dvh - 48px));
+        max-height: calc(100dvh - 48px);
+        min-height: 0;
+        overflow: hidden;
+        grid-template-rows: minmax(0, 1fr);
+    }
+
+    /* Foto kiri tetap diam */
+    #experienceDetail[data-experience-type="adventure"]
+    .experience-detail-visual {
+        min-height: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #experienceDetail[data-experience-type="adventure"]
+    .experience-detail-visual > img {
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+    }
+
+    /* Hanya kolom informasi kanan yang scroll */
+    #experienceDetail[data-experience-type="adventure"]
+    .experience-detail-content {
+        min-height: 0;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+}
+
+/* =========================================
+   ADVENTURE — ORNAMENT SCROLL FIX
+   ========================================= */
+
+#experienceDetail[data-experience-type="adventure"]
+.experience-detail-content {
+    background-color: #f5efdf;
+
+    /* Ornament mengikuti tinggi konten yang di-scroll */
+    background-image: url("../assets/ornaments/batikL2.png");
+    background-position: center top;
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+
+    background-blend-mode: normal;
+}
+
+/* Matikan ornament pseudo-element bawaan */
+#experienceDetail[data-experience-type="adventure"]
+.experience-detail-content::before {
+    content: none;
+}
+
+/* =========================================
+   ADVENTURE — ORNAMENT OPACITY
+   ========================================= */
+
+#experienceDetail[data-experience-type="adventure"]
+.experience-detail-content {
+    background-color: #f5efdf;
+
+    background-image:
+        linear-gradient(
+            rgba(245, 239, 223, 0.93),
+            rgba(245, 239, 223, 0.93)
+        ),
+        url("../assets/ornaments/batikL1.png");
+
+    background-position:
+        center top,
+        center top;
+
+    background-repeat:
+        no-repeat,
+        repeat-y;
+
+    background-size:
+        100% 100%,
+        100% auto;
+
+    background-blend-mode: normal, multiply;
+}
+
+/* Matikan ornament lama agar tidak double */
+#experienceDetail[data-experience-type="adventure"]
+.experience-detail-content::before {
+    content: none;
+}
+
+/* =========================================
+   ADVENTURE — FONT READABILITY
+   ========================================= */
+
+/* Judul utama */
+#experienceDetail[data-experience-type="adventure"]
+.experience-detail-content h3 {
+    color: #30271e;
+    font-weight: 500;
+}
+
+/* Label kecil di atas judul */
+#experienceDetail[data-experience-type="adventure"]
+.experience-detail-eyebrow {
+    color: #554635;
+    font-weight: 600;
+}
+
+/* Deskripsi */
+#experienceDetail[data-experience-type="adventure"]
+.experience-detail-description {
+    color: #554b3e;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.85;
+}
+
+/* Judul bagian destinasi */
+#experienceDetail[data-experience-type="adventure"]
+.experience-destination-area h4 {
+    color: #30271e;
+    font-weight: 700;
+}
+
+/* Nama destinasi */
+#experienceDetail[data-experience-type="adventure"]
+.experience-destination-info h5 {
+    color: #30271e;
+    font-weight: 600;
+}
+
+/* Deskripsi destinasi */
+#experienceDetail[data-experience-type="adventure"]
+.experience-destination-info p {
+    color: #554b3e;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+/* Tombol kontak */
+#experienceDetail[data-experience-type="adventure"]
+.experience-detail-contact {
+    color: #30271e;
+    border-color: #6d6048;
+    font-weight: 600;
+}
+
+/* ADVENTURE — TRAVEL TIME NOTE */
+#experienceDetail[data-experience-type="adventure"]
+.experience-destination-info p {
+    font-weight: 600;
+}
+
+/* ADVENTURE — TRAVEL TIME DISCLAIMER */
+#experienceDetail[data-experience-type="adventure"]
+.experience-detail-content .experience-price-note {
+    font-weight: 700 !important;
+    color: #554b3e;
+}
+
+
+/* SPA & MASSAGE — FONT LEBIH TEBAL */
+#experienceDetail[data-experience-type="spa"] 
+.experience-detail-content h3,
+#experienceDetail[data-experience-type="spa"] 
+.experience-detail-content h4,
+#experienceDetail[data-experience-type="spa"] 
+.experience-detail-content h5 {
+    font-weight: 700;
+}
+
+/* FIX: Discover Your Experience — normal capitalization */
+.experience .experience-header h2 {
+    text-transform: none !important;
+    font-variant: normal !important;
+    font-variant-caps: normal !important;
+}
+
+
+
+/* =========================================
+   ADVENTURE — DESTINATION CATEGORY FILTERS
+   ========================================= */
+.experience-destination-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 16px;
+}
+
+.experience-destination-filter {
+    appearance: none;
+    border: 1px solid #a69d7c88;
+    border-radius: 999px;
+    padding: 8px 13px;
+    background: rgba(248, 243, 232, 0.82);
+    color: #4a4b3d;
+    font: inherit;
+    font-size: 11px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.experience-destination-filter:hover,
+.experience-destination-filter.is-active {
+    border-color: #65705e;
+    background: #65705e;
+    color: #fff;
+}
+
+.experience-destination-filter:focus-visible {
+    outline: 2px solid #77764f;
+    outline-offset: 3px;
+}
+
+.experience-destination-empty {
+    margin: 0 0 14px;
+    color: #747366;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+    .experience-destination-filters {
+        gap: 6px;
+        margin-bottom: 13px;
+    }
+
+    .experience-destination-filter {
+        padding: 8px 11px;
+        font-size: 10px;
+    }
+}
+
+.experience .experience-header h2 {
+    font-family: "Quicksand", sans-serif !important;
+    font-size: clamp(38px, 4vw, 58px) !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+
+    letter-spacing: 0.30em !important;
+    line-height: 1.12;
+    text-align: center;
+
+    color: #80664e !important;
+    opacity: 0.60;
+}
+
+
+/* TOUR & TRAVEL — CATEGORY TABS */
+
+.experience-travel-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 24px 0;
+    width: 100%;
+}
+
+.experience-travel-tabs[hidden] {
+    display: none !important;
+}
+
+.experience-travel-tab {
+    padding: 12px 8px;
+    border: 1px solid rgba(128, 102, 78, 0.45);
+    border-radius: 999px;
+    background: transparent;
+    color: #594938;
+    font: inherit;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.experience-travel-tab:hover,
+.experience-travel-tab.is-active {
+    background: #80664E;
+    border-color: #80664E;
+    color: #fff;
+}
+
+/* MOTOR RENTAL CARDS */
+
+.experience-motor-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    width: 100%;
+}
+
+.experience-motor-card {
+    min-width: 0;
+    padding: 18px 14px;
+    border: 1px solid rgba(128, 102, 78, 0.3);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.experience-motor-card h4 {
+    margin: 0 0 8px;
+    color: #594938;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.experience-motor-card-subtitle {
+    margin: 0 0 12px;
+    color: #80664E;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.experience-motor-card-description {
+    margin: 0;
+    color: #594938;
+    font-size: 11px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.experience-travel-placeholder {
+    margin: 0;
+    color: #594938;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+@media (max-width: 520px) {
+    .experience-travel-tabs {
+        gap: 5px;
+    }
+
+    .experience-travel-tab {
+        padding: 10px 4px;
+        font-size: 10px;
+    }
+
+    .experience-motor-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+   TANÉA — TOUR & TRAVEL TABS REFINEMENT
+   ========================================= */
+
+.experience-travel-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    width: 100%;
+    margin: 28px auto 30px;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+}
+
+.experience-travel-tab {
+    appearance: none;
+    -webkit-appearance: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+    padding: 10px 17px;
+
+    border: 1px solid rgba(128, 102, 78, 0.35);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.16);
+    color: #594938;
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+
+    white-space: nowrap;
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.experience-travel-tab:hover {
+    border-color: #80664E;
+    background: rgba(128, 102, 78, 0.09);
+    color: #594938;
+}
+
+.experience-travel-tab.is-active {
+    border-color: #65705E;
+    background: #65705E;
+    color: #F8F3E8;
+}
+
+.experience-travel-tab:focus-visible {
+    outline: 2px solid #80664E;
+    outline-offset: 3px;
+}
+
+/* HIDDEN STATE */
+
+.experience-travel-tabs[hidden] {
+    display: none !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .experience-travel-tabs {
+        gap: 6px;
+        margin: 22px auto 24px;
+    }
+
+    .experience-travel-tab {
+        min-height: 35px;
+        padding: 9px 12px;
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================
+   TANÉA — MOTOR RENTAL IMAGE CARDS
+   ========================================= */
+
+.experience-motor-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+}
+
+.experience-motor-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0;
+    overflow: hidden;
+
+    border: 1px solid rgba(128, 102, 78, 0.28);
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.25);
+    color: #594938;
+    text-align: left;
+    font: inherit;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.experience-motor-card:hover {
+    transform: translateY(-3px);
+    border-color: #80664E;
+    box-shadow: 0 8px 20px rgba(70, 55, 40, 0.09);
+}
+
+.experience-motor-card.is-selected {
+    border-color: #65705E;
+    background: rgba(101, 112, 94, 0.09);
+    box-shadow: 0 0 0 1px #65705E;
+}
+
+.experience-motor-card:focus-visible {
+    outline: 2px solid #80664E;
+    outline-offset: 3px;
+}
+
+.experience-motor-card-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+}
+
+.experience-motor-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 13px;
+}
+
+.experience-motor-card-eyebrow {
+    margin-bottom: 7px;
+    color: #80664E;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+}
+
+.experience-motor-card-subtitle {
+    margin: 0 0 9px;
+    color: #594938;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.experience-motor-card-description {
+    margin: 0 0 17px;
+    color: #6f6558;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.experience-motor-card-link {
+    margin-top: auto;
+    color: #80664E;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+.experience-motor-card.is-selected .experience-motor-card-link {
+    color: #65705E;
+}
+
+@media (max-width: 520px) {
+    .experience-motor-cards {
+        gap: 10px;
+    }
+
+    .experience-motor-card-content {
+        padding: 12px 10px;
+    }
+
+    .experience-motor-card-subtitle {
+        font-size: 12px;
+    }
+
+    .experience-motor-card-description {
+        font-size: 10px;
+    }
+}
+
+
+/* MOTOR RENTAL — PRICE */
+
+.experience-motor-card-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    margin: 0 0 17px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(128, 102, 78, 0.22);
+}
+
+.experience-motor-card-price-label {
+    color: #80664E;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+}
+
+.experience-motor-card-price-value {
+    color: #65705E;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   TANÉA — CAR RENTAL CARD FINISHING
+   ========================================= */
+
+/* Samakan tinggi dan struktur kartu mobil */
+.experience-motor-cards:has(.experience-motor-card img[src*="7seat"]),
+.experience-motor-cards:has(.experience-motor-card img[src*="5seat"]) {
+    align-items: stretch;
+}
+
+.experience-motor-card:has(img[src*="7seat"]),
+.experience-motor-card:has(img[src*="5seat"]) {
+    height: 100%;
+}
+
+/* Foto mobil konsisten */
+.experience-motor-card img[src*="7seat"],
+.experience-motor-card img[src*="5seat"] {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Area isi kartu */
+.experience-motor-card:has(img[src*="7seat"]) .experience-motor-card-content,
+.experience-motor-card:has(img[src*="5seat"]) .experience-motor-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 13px;
+}
+
+/* Tombol WhatsApp selalu di bagian bawah */
+.experience-motor-card:has(img[src*="7seat"]) .experience-motor-card-link,
+.experience-motor-card:has(img[src*="5seat"]) .experience-motor-card-link {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 12px;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.experience-motor-card:has(img[src*="7seat"]) .experience-motor-card-link:hover,
+.experience-motor-card:has(img[src*="5seat"]) .experience-motor-card-link:hover {
+    color: #65705E;
+}
+
+/* Tampilan mobile */
+@media (max-width: 520px) {
+    .experience-motor-card:has(img[src*="7seat"]) .experience-motor-card-content,
+    .experience-motor-card:has(img[src*="5seat"]) .experience-motor-card-content {
+        padding: 12px 10px;
+    }
+}
+
+
+/* =========================================
+   TANÉA — DESTINATIONS EDITORIAL REFINEMENT
+   ========================================= */
+
+/* Destination grid */
+.experience-destinations {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* Editorial-style destination card */
+.experience-destination {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(128, 102, 78, 0.2);
+    border-radius: 12px;
+    background: #F8F3E8;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Larger, consistent destination imagery */
+.experience-destination img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.6s ease;
+}
+
+/* Editorial card information */
+.experience-destination-info {
+    padding: 15px 14px 16px;
+}
+
+.experience-destination-info h5 {
+    margin: 0 0 7px;
+    color: #303426;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.experience-destination-info p {
+    margin: 0;
+    color: #777568;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+/* Subtle hover effect */
+@media (hover: hover) and (pointer: fine) {
+    .experience-destination:hover {
+        transform: translateY(-3px);
+        border-color: rgba(101, 112, 94, 0.55);
+        box-shadow: 0 10px 24px rgba(48, 52, 38, 0.08);
+    }
+
+    .experience-destination:hover img {
+        transform: scale(1.035);
+    }
+}
+
+/* Destination category filters */
+.experience-destination-filter {
+    padding: 8px 14px;
+    border: 1px solid rgba(128, 102, 78, 0.3);
+    border-radius: 999px;
+    background: transparent;
+    color: #594938;
+
+    font-family: inherit;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.experience-destination-filter:hover {
+    border-color: #65705E;
+    background: rgba(101, 112, 94, 0.08);
+}
+
+.experience-destination-filter.is-active {
+    border-color: #65705E;
+    background: #65705E;
+    color: #F8F3E8;
+}
+
+.experience-destination-filter:focus-visible {
+    outline: 2px solid #80664E;
+    outline-offset: 3px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 640px) {
+    .experience-destinations {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .experience-destination {
+        border-radius: 10px;
+    }
+
+    .experience-destination-info {
+        padding: 12px 10px;
+    }
+
+    .experience-destination-info h5 {
+        font-size: 13px;
+    }
+
+    .experience-destination-info p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .experience-destinations {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* =========================================================
+   ADVENTURE — ACTIVITY GRID
+   REFINED LAYOUT
+   ========================================================= */
+
+.experience-adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+    align-items: start;
+}
+
+.experience-adventure-card {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.experience-adventure-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.experience-adventure-content {
+    min-width: 0;
+    padding: 12px 10px 14px;
+}
+
+.experience-adventure-title {
+    margin: 0 0 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 600;
+    font-style: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.experience-adventure-description {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.65;
+    opacity: 0.85;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .experience-adventure-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .experience-adventure-content {
+        padding: 14px 12px;
+    }
+
+    .experience-adventure-title {
+        font-size: 14px;
+    }
+
+    .experience-adventure-description {
+        font-size: 13px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .experience-adventure-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .experience-adventure-image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .experience-adventure-content {
+        padding: 14px;
+    }
+
+    .experience-adventure-title {
+        font-size: 15px;
+    }
+
+    .experience-adventure-description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+
+/* ADVENTURE — IMPROVE TEXT READABILITY */
+
+.experience-detail[data-experience-type="adventure"]
+.experience-adventure-card {
+    background: rgba(245, 237, 222, 0.82);
+    border-color: rgba(70, 72, 55, 0.12);
+}
+
+.experience-detail[data-experience-type="adventure"]
+.experience-adventure-title {
+    overflow-wrap: normal;
+    word-break: normal;
+    letter-spacing: 0.08em;
+}
+
+.experience-detail[data-experience-type="adventure"]
+.experience-adventure-description {
+    color: #625f53;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   SPA & MASSAGE — MATCH DETAIL PANEL STYLE
+   ========================================================= */
+
+/* Samakan karakter ornamen dengan panel lain */
+#experienceDetail[data-experience-type="spa"]
+.experience-detail-content::before {
+    opacity: 0.06;
+}
+
+/* Samakan keterbacaan konten */
+#experienceDetail[data-experience-type="spa"]
+.experience-detail-content {
+    color: #30271e;
+}
+
+/* Judul treatment lebih konsisten */
+#experienceDetail[data-experience-type="spa"]
+.experience-price-area h4 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+}
+
+/* Baris treatment */
+#experienceDetail[data-experience-type="spa"]
+.experience-price-row {
+    padding-block: 12px;
+    border-color: rgba(85, 70, 53, 0.18);
+}
+
+/* Harga lebih tegas tetapi tetap elegan */
+#experienceDetail[data-experience-type="spa"]
+.experience-price-row span:last-child {
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Tombol mengikuti gaya minimal Tanéa */
+#experienceDetail[data-experience-type="spa"]
+.experience-detail-contact {
+    min-height: 42px;
+    padding: 12px 18px;
+    border: 1px solid #6d6048;
+    background: transparent;
+    letter-spacing: 0.1em;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+#experienceDetail[data-experience-type="spa"]
+.experience-detail-contact:hover {
+    background: #6d6048;
+    color: #f5ede0;
+}

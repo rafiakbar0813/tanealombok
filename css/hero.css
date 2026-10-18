@@ -1,0 +1,646 @@
+
+/* =========================================================
+   TANÉA GUESTHOUSE
+   HERO — CINEMATIC MINIMAL
+   WARM BROWN WATER RIPPLE
+   ========================================================= */
+
+
+/* =========================================================
+   01. HERO BASE
+   ========================================================= */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    height: 100svh;
+    min-height: 650px;
+
+    overflow: hidden;
+
+    /* WARM BROWN BACKGROUND */
+    background:
+        radial-gradient(
+            ellipse at 50% 30%,
+            #F8F3EC 0%,
+            #E8D9C8 35%,
+            #BCA58C 68%,
+            #80664E 100%
+        );
+
+    color: #342B21;
+}
+
+
+/* =========================================================
+   02. BACKGROUND SLIDER
+   DISABLED — NO BACKGROUND PHOTOS
+   ========================================================= */
+
+.hero-background {
+    display: none !important;
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hero-bg-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 0;
+    pointer-events: none;
+
+    transition:
+        opacity 2.2s cubic-bezier(
+            0.25,
+            0.1,
+            0.25,
+            1
+        );
+}
+
+.hero-bg-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.hero-bg-slide img {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transform: none;
+    filter: none;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.hero-bg-slide .image-placeholder {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #F5EDE6;
+}
+
+
+/* =========================================================
+   03. WATER LIGHT
+   ========================================================= */
+
+.hero-water-light {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 15%,
+            rgba(255, 250, 241, 0.55) 0%,
+            rgba(232, 217, 200, 0.20) 35%,
+            transparent 70%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(245, 235, 220, 0.04) 0%,
+            rgba(190, 163, 134, 0.08) 45%,
+            rgba(79, 55, 37, 0.30) 100%
+        );
+}
+
+
+/* =========================================================
+   04. WATER RIPPLE — FULL HERO COVERAGE
+   ========================================================= */
+
+.hero-water-ripple {
+    position: absolute;
+
+    left: 50%;
+    top: 55%;
+
+    /*
+       Lebih besar daripada hero supaya
+       tepi riak tidak berhenti di tengah layar.
+    */
+    width: 150%;
+    height: 130%;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    z-index: 2;
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+
+    background:
+        repeating-radial-gradient(
+            ellipse at 50% 50%,
+            transparent 0,
+            transparent 18px,
+            rgba(255, 248, 237, 0.30) 20px,
+            rgba(255, 248, 237, 0.10) 24px,
+            transparent 29px,
+            transparent 46px
+        );
+
+    opacity: 0.55;
+    filter: blur(1.5px);
+
+    animation:
+        waterRippleExpand 9s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   05. SECOND RIPPLE LAYER
+   ========================================================= */
+
+.hero-water-ripple::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-radial-gradient(
+            ellipse at 48% 52%,
+            transparent 0,
+            transparent 28px,
+            rgba(93, 66, 43, 0.16) 30px,
+            transparent 35px,
+            transparent 58px
+        );
+
+    opacity: 0.7;
+
+    animation:
+        waterRippleSecond 11s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   06. WATER HIGHLIGHT
+   ========================================================= */
+
+.hero-water-ripple::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 85%;
+    height: 65%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255, 248, 237, 0.26),
+            rgba(224, 202, 177, 0.08) 45%,
+            transparent 75%
+        );
+
+    filter: blur(16px);
+
+    animation:
+        waterHighlight 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   07. WATER ANIMATIONS
+   ========================================================= */
+
+@keyframes waterRippleExpand {
+    0% {
+        transform: translate(-50%, -50%) scale(0.94);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.04);
+        opacity: 0.65;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0.94);
+        opacity: 0.35;
+    }
+}
+
+@keyframes waterRippleSecond {
+    0% {
+        transform: scale(0.96);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.04);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(0.96);
+        opacity: 0.3;
+    }
+}
+
+@keyframes waterHighlight {
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scaleX(0.88);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scaleX(1.08);
+        opacity: 0.7;
+    }
+}
+
+
+/* =========================================================
+   08. HERO OVERLAY
+   ========================================================= */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 3;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(70, 48, 31, 0.04) 0%,
+            rgba(70, 48, 31, 0.01) 35%,
+            rgba(70, 48, 31, 0.05) 62%,
+            rgba(70, 48, 31, 0.20) 100%
+        );
+}
+
+
+/* =========================================================
+   09. HERO BRAND
+   ========================================================= */
+
+.hero-brand {
+    position: absolute;
+
+    top: 42%;
+    left: 50%;
+
+    z-index: 6;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: max-content;
+    max-width: 80%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   10. MAIN LOGO
+   ========================================================= */
+
+.hero-main-logo {
+    display: block;
+
+    width: clamp(100px, 24vw, 200px);
+    height: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   11. TAGLINE
+   ========================================================= */
+
+.hero-tagline {
+    margin-top: 30px;
+
+    transform: translateY(-28px);
+
+    font-family: "Quicksand", sans-serif;
+    font-size: clamp(13px, 1.2vw, 18px);
+
+    font-style: normal;
+    font-weight: 400;
+
+    letter-spacing: 0.30em;
+    line-height: 1.4;
+
+    color: #604820;
+
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   12. BRAND REFLECTION
+   ========================================================= */
+
+.hero-brand::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 108%;
+
+    width: 160%;
+    height: 70px;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+    background:
+        repeating-radial-gradient(
+            ellipse at center,
+            transparent 0,
+            transparent 9px,
+            rgba(255, 248, 237, 0.18) 11px,
+            rgba(255, 248, 237, 0.05) 14px,
+            transparent 17px,
+            transparent 25px
+        );
+
+    filter: blur(2px);
+    opacity: 0.25;
+
+    animation:
+        waterReflection 6s ease-in-out infinite;
+}
+
+@keyframes waterReflection {
+    0%,
+    100% {
+        transform: translateX(-50%) scaleX(0.90);
+        opacity: 0.15;
+    }
+
+    50% {
+        transform: translateX(-50%) scaleX(1.04);
+        opacity: 0.30;
+    }
+}
+
+
+/* =========================================================
+   13. RUNNING PHOTO MARQUEE
+   ========================================================= */
+
+.hero-photo-marquee {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    z-index: 7;
+
+    width: 100%;
+
+    overflow: hidden;
+    padding-bottom: 54px;
+}
+
+.hero-photo-track {
+    display: flex;
+
+    width: max-content;
+    gap: 0;
+
+    will-change: transform;
+
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* =========================================================
+   14. MARQUEE PHOTO FRAME
+   ========================================================= */
+
+.marquee-photo {
+    flex: 0 0 auto;
+
+    width: clamp(170px, 19vw, 270px);
+    height: clamp(100px, 11vw, 150px);
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.marquee-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+/* =========================================================
+   15. SCROLL INDICATOR
+   ========================================================= */
+
+.hero-scroll {
+    position: absolute;
+
+    left: 50%;
+    bottom: 17px;
+
+    z-index: 8;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #604820;
+
+    transform: translateX(-50%);
+}
+
+.hero-scroll-line {
+    width: 24px;
+    height: 1px;
+
+    background: rgba(96, 72, 32, 0.65);
+}
+
+.hero-scroll-text {
+    font-size: 8px;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   16. MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero-brand {
+        top: 39%;
+        max-width: 82%;
+    }
+
+    .hero-main-logo {
+        width: 180px;
+    }
+
+    .hero-tagline {
+        margin-top: 14px;
+        font-size: 13px;
+    }
+
+    .hero-photo-marquee {
+        padding-bottom: 48px;
+    }
+
+    .marquee-photo {
+        width: 145px;
+        height: 95px;
+    }
+
+    .hero-scroll {
+        bottom: 15px;
+    }
+
+    .hero-water-ripple {
+        top: 55%;
+        width: 180%;
+        height: 125%;
+
+        opacity: 0.55;
+    }
+}
+
+
+/* =========================================================
+   17. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+    .hero-brand {
+        top: 37%;
+        max-width: 85%;
+    }
+
+    .hero-main-logo {
+        width: 185px;
+    }
+
+    .hero-tagline {
+        font-size: 11px;
+        letter-spacing: 0.22em;
+    }
+
+    .marquee-photo {
+        width: 135px;
+        height: 90px;
+    }
+
+    .hero-water-ripple {
+        width: 200%;
+        height: 120%;
+    }
+}
+
+
+/* =========================================================
+   18. TABLET
+   ========================================================= */
+
+@media (min-width: 701px) and (max-width: 1024px) {
+    .hero-brand {
+        top: 41%;
+    }
+
+    .hero-main-logo {
+        width: clamp(150px, 22vw, 190px);
+    }
+
+    .marquee-photo {
+        width: clamp(160px, 21vw, 220px);
+        height: clamp(100px, 13vw, 135px);
+    }
+
+    .hero-water-ripple {
+        width: 160%;
+        height: 130%;
+    }
+}
+
+
+/* =========================================================
+   19. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-water-ripple,
+    .hero-water-ripple::before,
+    .hero-water-ripple::after,
+    .hero-brand::after {
+        animation: none !important;
+    }
+}

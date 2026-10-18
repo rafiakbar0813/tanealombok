@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Jangan pakai maximum-scale / user-scalable=no: merusak zoom & aksesibilitas -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="tanéa guesthouse — a gentle stay for the soul in Mertak, Lombok."
+    >
+
+    <title>
+        tanéa guesthouse — Mertak, Lombok
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+         ===================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/stay.css">
+    <link rel="stylesheet" href="css/comfort.css">
+    <link rel="stylesheet" href="css/moments.css">
+    <link rel="stylesheet" href="css/explore.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/reviews.css">
+
+    <!-- FOOTER CSS LOAD LAST -->
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Perbaikan responsive final — HARUS paling akhir -->
+    <link rel="stylesheet" href="css/fixes.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-inner">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="#arrival"
+                class="logo"
+            >
+
+                <span class="logo-main">
+                    tanéa
+                </span>
+
+                <span class="logo-sub">
+                    GUESTHOUSE
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="navbar-menu">
+
+                <a href="#arrival">
+                    Home
+                </a>
+
+                <a href="#discover">
+                    About
+                </a>
+
+                <a href="#experience">
+                    Experience
+                </a>
+
+                <a href="#stay">
+                    Room
+                </a>
+
+                <a href="#moments">
+                    Gallery
+                </a>
+
+                <a href="#explore">
+                    Location
+                </a>
+
+            </nav>
+
+
+            <!-- LANGUAGE SWITCHER -->
+            <div class="language-switch" role="group" aria-label="Choose language">
+                <button type="button" class="language-option is-active" data-language="id" aria-pressed="true">ID</button>
+                <span aria-hidden="true">|</span>
+                <button type="button" class="language-option" data-language="en" aria-pressed="false">EN</button>
+            </div>
+
+            <!-- BOOKING -->
+            <a href="https://wa.me/6281311394071?text=Halo%20Tan%C3%A9a%20Guesthouse%2C%20saya%20ingin%20bertanya%20tentang%20reservasi%20kamar." target="_blank" rel="noopener noreferrer" class="navbar-booking" data-i18n="navBooking">BOOK NOW</a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="mobile-menu-toggle"
+                type="button"
+                aria-label="Buka menu"
+            >
+
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             01. BERANDA / HERO
+             ================================================= -->
+
+        <section
+            class="hero"
+            id="arrival"
+        >
+
+
+            <!-- =================================================
+                 HERO BACKGROUND FADE SLIDER
+                 ================================================= -->
+
+            <div class="hero-background">
+                
+
+
+                <div
+                    class="hero-bg-slide active"
+                    data-bg="0"
+                >
+
+                    <img
+                        src="assets/outdoor/view1.png"
+                        alt="Tanéa Guesthouse"
+                    >
+
+                </div>
+
+
+                <div
+                    class="hero-bg-slide"
+                    data-bg="1"
+                >
+
+                    <img
+                        src="assets/logo/Reception.png"
+                        alt="Tanéa Guesthouse"
+                    >
+
+                </div>
+
+
+                <div
+                    class="hero-bg-slide"
+                    data-bg="2"
+                >
+
+                    <img
+                        src="assets/outdoor/view2.png"
+                        alt="Tanéa Guesthouse"
+                    >
+
+                </div>
+
+
+                <div
+                    class="hero-bg-slide"
+                    data-bg="3"
+                >
+
+                    <img
+                        src="assets/outdoor/kolam1.png"
+                        alt="Tanéa Guesthouse"
+                    >
+
+                </div>
+
+
+            </div>
+
+            <!-- =================================================
+                 WATER ANIMATION
+                 ================================================= -->
+
+            <div class="hero-water-light" aria-hidden="true"></div>
+            <div class="hero-water-ripple" aria-hidden="true"></div>
+
+            <!-- =================================================
+                 HERO OVERLAY
+                 ================================================= -->
+
+            <div class="hero-overlay"></div>
+
+
+
+            <!-- =================================================
+                 HERO BRAND
+                 ================================================= -->
+
+            <div class="hero-brand">
+
+                <img
+                    src="assets/logo/Logofix-removebg-preview.png"
+                    alt="tanéa guesthouse"
+                    class="hero-main-logo"
+                >
+
+                <div class="hero-tagline">
+                    a gentle stay for the soul
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 RUNNING PHOTO STRIP
+                 ================================================= -->
+
+            <div class="hero-photo-marquee">
+
+                <div class="hero-photo-track">
+
+
+                    <div class="marquee-photo">
+                        <img
+                            src="assets/outdoor/basetanea1.jpeg"
+                            alt="Tanéa Reception"
+                        >
+                    </div>
+
+
+                    <div class="marquee-photo">
+                        <img
+                            src="assets/outdoor/relaxroom.png"
+                            alt="Tanéa Room"
+                        >
+                    </div>
+
+
+                    <div class="marquee-photo">
+                        <img
+                            src="assets/outdoor/lorong.jpeg"
+                            alt="Tanéa Room"
+                        >
+                    </div>
+
+
+                    <div class="marquee-photo">
+                        <img
+                            src="assets/outdoor/kolam.jpeg"
+                            alt="Tanéa Room"
+                        >
+                    </div>
+
+
+                    <div class="marquee-photo">
+                        <img
+                            src="assets/outdoor/ViewOTDR3.jpeg"
+                            alt="Tanéa Relax Room"
+                        >
+                    </div>
+
+
+                    <div class="marquee-photo">
+                        <img
+                            src="assets/outdoor/ViewOTDR6.jpeg"
+                            alt="Tanéa Pool"
+                        >
+                    </div>
+
+
+                    <div class="marquee-photo">
+                        <img
+                            src="assets/outdoor/ViewOTDR11.jpeg"
+                            alt="Tanéa Outdoor"
+                        >
+                    </div>
+
+
+                    <div class="marquee-photo">
+                        <img
+                            src="assets/outdoor/ViewOTDR6.jpeg"
+                            alt="Tanéa View"
+                        >
+                    </div>
+
+
+                    <div class="marquee-photo">
+                        <img
+                            src="assets/outdoor/ViewOTDR8.jpeg"
+                            alt="Tanéa View"
+                        >
+                    </div>
+
+
+                    <div class="marquee-photo">
+                        <img
+                            src="assets/outdoor/view1.png"
+                            alt="Tanéa View"
+                        >
+                    </div>
+
+
+                    <div class="marquee-photo">
+                        <img
+                            src="assets/outdoor/view4.png"
+                            alt="Tanéa View"
+                        >
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+      <!-- =================================================
+             02. OUR STORY
+             ================================================= -->
+
+        <section
+            id="discover"
+            class="section discover-section"
+        >
+
+            <div class="section-number"></div>
+
+            <div class="story-editorial">
+
+                <!-- STORY 01 -->
+                <div class="story-row story-row-01">
+
+                    <div class="story-intro">
+
+                        <p class="eyebrow">
+                            philosophy
+                        </p>
+
+                        <h2>
+                            a place to<br>
+                            feel at ease
+                        </h2>
+
+                        <p class="story-intro-text">
+                            Inspired by the word “tana,” meaning earth and a place to stay,
+                            tanéa guesthouse is nestled in Mertak Village, Central Lombok,
+                            offering a peaceful sanctuary for travelers seeking warmth,
+                            tranquility, and balance amidst nature.
+                        </p>
+
+                    </div>
+
+                    <div class="story-visual">
+
+                        <div class="story-image">
+                            <div class="image-placeholder">
+
+                                <img
+                                    src="assets/outdoor/basetanea1.jpeg"
+                                    alt="Tanéa Guesthouse"
+                                    class="story-photo"
+                                >
+
+                            </div>
+                        </div>
+
+                        <div class="story-caption vertical">
+                            ────── a gentle way to stay
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- STORY 02 -->
+                <div class="story-row story-row-02">
+
+                    <div class="story-visual">
+
+                        <div class="story-image">
+                            <div class="image-placeholder">
+
+                                <img
+                                    src="assets/outdoor/workstation.jpeg"
+                                    alt="Tanéa Guesthouse"
+                                    class="story-photo"
+                                >
+
+                            </div>
+                        </div>
+
+                        <div class="story-caption vertical">
+                            ────── Feel safe, feel free
+                        </div>
+
+                    </div>
+
+                    <div class="story-description">
+
+                        <h3>
+                            made for her
+                        </h3>
+
+                        <p>
+                            Tanéa is a female-friendly guesthouse created
+                            with comfort, privacy, and peace of mind.
+                            Whether travelling solo or simply looking for
+                            a quieter escape, every stay is designed to feel
+                            safe, welcoming, and effortless.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STORY 03 -->
+                <div class="story-row story-row-03">
+
+                    <div class="story-description">
+
+                        <h3>
+                            work, rest, reset
+                        </h3>
+
+                        <p>
+                            While work carries on, Tanéa offers a peaceful space to work in comfort,
+                            take a moment to rest, and return with a clearer mind.
+                            A stay designed for workcations, where productivity meets relaxation.
+                        </p>
+
+                    </div>
+
+                    <div class="story-visual">
+
+                        <div class="story-image">
+                            <div class="image-placeholder">
+
+                                <img
+                                    src="assets/outdoor/kolam.jpeg"
+                                    alt="Tanéa Guesthouse"
+                                    class="story-photo"
+                                >
+
+                            </div>
+                        </div>
+
+                        <div class="story-caption vertical">
+                            ────── Work at your own pace
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+<!-- =========================================
+     EXPERIENCE — TANÉA GUESTHOUSE
+     ========================================= -->
+
+<section class="experience" id="experience">
+
+    <div class="experience-container">
+
+        <!-- HEADER -->
+        
+        <div class="experience-header">
+
+            <h2>discover your experience</h2>
+
+            <p>
+               Indulge in moments of deep relaxation, discover the beauty of Lombok through thoughtfully curated journeys, 
+               and embrace exciting adventures surrounded by the island’s breathtaking landscapes. 
+               From soothing spa treatments to cultural discoveries and outdoor explorations, 
+               each experience is designed to enrich your stay, create lasting memories, 
+               and connect you with the natural charm and authentic spirit of Lombok.
+            </p>
+
+        </div>
+
+
+        <!-- THREE EXPERIENCE CARDS -->
+        <div class="experience-items">
+
+            <button
+                class="experience-item"
+                type="button"
+                data-experience-card="spa"
+                aria-label="Lihat detail Spa and Massage"
+            >
+                <div class="experience-item-image">
+                    <img
+                        src="assets/outdoor/relaxroom.png"
+                        alt="Spa and Massage Tanéa"
+                        loading="lazy"
+                    >
+                    <span class="experience-card-number">01</span>
+                    <span class="experience-card-arrow">↗</span>
+                </div>
+
+                <div class="experience-item-content">
+                    <h3>spa &amp; massage</h3>
+                    <p>
+                        Slow down, unwind, and reconnect
+                        with yourself.
+                    </p>
+                    <span class="experience-card-link">
+                        Explore Treatment <span>→</span>
+                    </span>
+                </div>
+            </button>
+
+            <button
+                class="experience-item"
+                type="button"
+                data-experience-card="travel"
+                aria-label="Lihat detail Tour and Travel"
+            >
+                <div class="experience-item-image">
+                    <img
+                        src="assets/outdoor/ViewOTDR7.jpeg"
+                        alt="Perjalanan dan pemandangan Lombok"
+                        loading="lazy"
+                    >
+                    <span class="experience-card-number">02</span>
+                    <span class="experience-card-arrow">↗</span>
+                </div>
+
+                <div class="experience-item-content">
+                    <h3>tour &amp; travel</h3>
+                    <p>
+                        Explore Lombok at your own pace
+                        with convenient transport.
+                    </p>
+                    <span class="experience-card-link">
+                        Explore Rentals <span>→</span>
+                    </span>
+                </div>
+            </button>
+
+            <button
+                class="experience-item"
+                type="button"
+                data-experience-card="adventure"
+                aria-label="Lihat destinasi Adventure"
+            >
+                <div class="experience-item-image">
+                    <img
+                        src="assets/outdoor/view2.png"
+                        alt="Pemandangan alam Lombok"
+                        loading="lazy"
+                    >
+                    <span class="experience-card-number">03</span>
+                    <span class="experience-card-arrow">↗</span>
+                </div>
+
+                <div class="experience-item-content">
+                    <h3>adventure</h3>
+                    <p>
+                        Discover beautiful beaches and
+                        hidden gems around Tanéa.
+                    </p>
+                    <span class="experience-card-link">
+                        Explore Destinations <span>→</span>
+                    </span>
+                </div>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- DETAIL PANEL BACKDROP -->
+    <div
+        class="experience-detail-backdrop"
+        data-detail-close
+        aria-hidden="true"
+    ></div>
+
+    <!-- DETAIL PANEL -->
+    <aside
+        class="experience-detail"
+        id="experienceDetail"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="experienceDetailTitle"
+        aria-hidden="true"
+        inert
+    >
+        <button
+            class="experience-detail-close"
+            type="button"
+            data-detail-close
+            aria-label="Tutup detail"
+        >&times;</button>
+
+        <!-- LARGE IMAGE -->
+        <div class="experience-detail-visual">
+            <img
+                id="experienceDetailImage"
+                src="assets/outdoor/relaxroom.png"
+                alt=""
+            >
+            <span id="experienceDetailNumber">EXPERIENCE — 01</span>
+        </div>
+
+        <!-- INFORMATION AREA -->
+        <div class="experience-detail-content">
+
+            <span class="experience-detail-eyebrow">
+                TANÉA GUESTHOUSE
+            </span>
+
+            <h3 id="experienceDetailTitle">spa &amp; massage</h3>
+
+            <p
+                class="experience-detail-description"
+                id="experienceDetailDescription"
+            ></p>
+
+            <!-- SPA / RENTAL PRICE LIST -->
+            <div
+                class="experience-price-area"
+                id="experiencePriceArea"
+                hidden
+            >
+                <h4 id="experiencePriceHeading">Treatment Menu</h4>
+
+                <p class="experience-price-note">
+                    Prices and availability can be confirmed
+                    directly with Tanéa Guesthouse.
+                </p>
+
+                <div
+                    class="experience-price-list"
+                    id="experiencePriceList"
+                ></div>
+            </div>
+
+            <!-- ADVENTURE DESTINATIONS -->
+            <div
+                class="experience-destination-area"
+                id="experienceDestinationArea"
+                hidden
+            >
+                <h4>Nearby Destinations</h4>
+                <p class="experience-price-note">
+                    Travel times are estimates and should be
+                    confirmed based on your departure time.
+                </p>
+
+                <div
+                    class="experience-destination-filters"
+                    id="experienceDestinationFilters"
+                    aria-label="Filter destinations by category"
+                ></div>
+
+                <p class="experience-destination-empty" id="experienceDestinationEmpty" hidden></p>
+
+                <div
+                    class="experience-destinations"
+                    id="experienceDestinations"
+                ></div>
+            </div>
+
+            <a
+                class="experience-detail-contact"
+                id="experienceDetailContact"
+                href="https://wa.me/6281311394071"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Ask for Details <span>↗</span>
+            </a>
+
+        </div>
+    </aside>
+
+</section>
+
+
+
+
+<!-- =================================================
+     04. ROOM
+     ================================================= -->
+
+<section class="stay" id="stay">
+
+    <div class="stay-container">
+
+        <!-- HEADER -->
+        <div class="stay-header">
+
+            <div class="stay-content">
+
+                <span class="section-label">
+                    Ciptakan kenangan indah lewat kenyamanan menginap yang istimewa.
+                </span>
+
+                <h2>
+                    rooms
+                </h2>
+
+                <p>
+                    Temukan pengalaman menginap yang dirancang untuk
+                    menghadirkan kenyamanan, ketenangan, dan kedekatan
+                    dengan keindahan alam tropis Lombok. Setiap ruang
+                    memadukan suasana yang hangat, detail interior
+                    yang natural, serta atmosfer santai untuk menemani
+                    setiap momen selama Anda menginap di Tanéa Guesthouse.
+                </p>
+
+            </div>
+
+            <!-- ORNAMEN DAUN -->
+            <div class="stay-ornament" aria-hidden="true">
+                <img
+                    src="assets/ornaments/ornament-8.png"
+                    alt=""
+                >
+            </div>
+
+        </div>
+
+
+        <!-- ROOM CARDS -->
+        <div class="stay-rooms">
+
+            <!-- ROOM 01 -->
+            <article class="stay-room-card">
+
+
+                <div class="stay-room-image">
+                    <a href="deluxe-room.html" class="stay-room-link">
+                        <img
+                            src="assets/kamar/kamar8.jpeg"
+                            alt="Deluxe Room Tanéa Guesthouse"
+                            loading="lazy"
+                        >
+
+                        <span class="stay-room-overlay">
+                            <span class="stay-room-view">VIEW ROOM <span aria-hidden="true">↗</span></span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="stay-room-info">
+
+                    <h3>deluxe room</h3>
+
+                    <div class="stay-room-meta">
+
+                        <span>
+                            <i data-lucide="maximize"></i>
+                            24 m²
+                        </span>
+
+                        <span>
+                            <i data-lucide="users"></i>
+                            Max 2 Guests
+                        </span>
+
+                        <span>
+                            <i data-lucide="bed-double"></i>
+                            1 King Bed
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Ruang beristirahat yang nyaman dengan suasana
+                        natural untuk menemani waktu bersantai selama
+                        berada di Lombok.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <!-- ROOM 03 -->
+            <article class="stay-room-card">
+
+                <div class="stay-room-image">
+                    <a href="twin-room.html" class="stay-room-link" target="_self">
+                        <img
+                            src="assets/kamar/kamar7.jpeg"
+                            alt="Twin Room Tanéa Guesthouse"
+                            loading="lazy"
+                        >
+                    </a>
+                </div>
+
+                <div class="stay-room-info">
+
+                    <h3>twin room</h3>
+
+                    <div class="stay-room-meta">
+
+                        <span>
+                            <i data-lucide="maximize"></i>
+                            24 m²
+                        </span>
+
+                        <span>
+                            <i data-lucide="users"></i>
+                            Max 2 Guests
+                        </span>
+
+                        <span>
+                            <i data-lucide="bed-double"></i>
+                            2 Single Bed
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Ruang yang dirancang untuk memberikan
+                        kenyamanan dan keleluasaan saat menikmati
+                        waktu bersama teman atau keluarga.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- ROOM LINK -->
+        <div class="stay-footer">
+
+            <a href="https://wa.me/6281311394071?text=Halo%20Tan%C3%A9a%20Guesthouse%2C%20saya%20ingin%20bertanya%20tentang%20reservasi%20kamar." target="_blank" rel="noopener noreferrer" class="text-link" data-i18n="roomBookingLink">
+                Pesan Kamar
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     07. GALERI / MOMENTS
+     ================================================= -->
+
+<section class="moments" id="moments">
+
+    <div class="moments-container">
+
+        <div class="moments-heading">
+
+            <span class="section-label">
+                INSTAGRAM
+            </span>
+
+            <h2>moments at tanéa</h2>
+
+            <a
+                href="https://www.instagram.com/tanea.official_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="moments-instagram-link"
+            >
+                Follow our journey ↗
+            </a>
+
+        </div>
+
+                <div class="moments-gallery">
+
+                <a
+                    href="https://www.instagram.com/p/DcvUu-XAe5k/"
+                    class="moments-photo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="assets/gallery/ig1.png"
+                        alt="Twin room at Tanéa Guesthouse"
+                        loading="lazy"
+                    >
+                    <span class="moments-photo-overlay">
+                        <span>View on Instagram ↗</span>
+                    </span>
+                </a>
+
+                <a
+                    href="https://www.instagram.com/p/DdkZVE3gTMW/"
+                    class="moments-photo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="assets/gallery/ig2.png"
+                        alt="Room experience at Tanéa Guesthouse"
+                        loading="lazy"
+                    >
+                    <span class="moments-photo-overlay">
+                        <span>View on Instagram ↗</span>
+                    </span>
+                </a>
+
+                <a
+                    href="https://www.instagram.com/p/DY6KcGvBbYo/"
+                    class="moments-photo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="assets/gallery/ig3.png"
+                        alt="Tanéa Guesthouse moments"
+                        loading="lazy"
+                    >
+                    <span class="moments-photo-overlay">
+                        <span>View on Instagram ↗</span>
+                    </span>
+                </a>
+
+                <a
+                    href="https://www.instagram.com/p/DY6KV01hNRj/"
+                    class="moments-photo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="assets/gallery/ig4.png"
+                        alt="Welcome to Tanéa Guesthouse"
+                        loading="lazy"
+                    >
+                    <span class="moments-photo-overlay">
+                        <span>View on Instagram ↗</span>
+                    </span>
+                </a>
+
+            </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     09. LOCATION — INTERACTIVE MAP FOCUS
+     TANÉA GUESTHOUSE
+     ================================================= -->
+
+<section class="explore" id="explore">
+
+    <div class="explore-container">
+
+        <div class="location-top-label">location</div>
+        <div class="location-layout">
+
+            <img
+                src="assets/ornaments/ornament-10.png"
+                class="location-ornament"
+                alt=""
+                aria-hidden="true"
+            >
+            
+            <!-- LEFT: MAP -->
+            <div class="explore-map">
+
+                <div class="live-map-wrapper">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63067.52924651007!2d116.3301021!3d-8.9055485!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdab002cbb847f%3A0x8bb7eccf31d48f7!2sTANEA%20Guest%20House!5e0!3m2!1sid!2sid!4v1791877036672!5m2!1sid!2sid"
+                        title="TANEA Guest House Location"
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+                <div class="map-caption">
+                    <span>MERTAK · CENTRAL LOMBOK</span>
+
+                    <a
+                        href="https://maps.app.goo.gl/QtVHffbfXvTw5UzZA"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        OPEN GOOGLE MAPS <span>↗</span>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT: INFORMATION PANEL -->
+            <aside class="location-sidebar">
+
+                
+                <div class="location-sidebar-intro">
+
+                    <h2>
+                        explore
+                    </h2>
+
+                    <p>
+                        Discover beautiful beaches, scenic landscapes,
+                        and local attractions, all within reach from
+                        Tanéa Guesthouse.
+                    </p>
+
+                </div>
+
+
+
+                <!-- DESTINATION LIST -->
+                
+                <div class="destination-guide">
+
+                    <a class="destination-card"
+                    href="https://www.google.com/maps/search/?api=1&query=Mandalika+Lombok"
+                    target="_blank" rel="noopener noreferrer">
+
+                        <img src="assets/outdoor/view2.png" alt="Mandalika Lombok" loading="lazy">
+
+                        <span class="destination-copy">
+                            <span class="destination-name">Mandalika</span>
+                            <span class="destination-time">Explore the coast</span>
+                        </span>
+
+                        <span class="destination-arrow">→</span>
+                    </a>
+
+                    <a class="destination-card"
+                    href="https://www.google.com/maps/search/?api=1&query=Tanjung+Aan+Beach+Lombok"
+                    target="_blank" rel="noopener noreferrer">
+
+                        <img src="assets/outdoor/basetanea1.jpeg" alt="Tanjung Aan" loading="lazy">
+
+                        <span class="destination-copy">
+                            <span class="destination-name">Tanjung Aan</span>
+                            <span class="destination-time">Beach & coastline</span>
+                        </span>
+
+                        <span class="destination-arrow">→</span>
+                    </a>
+
+                    <a class="destination-card"
+                    href="https://www.google.com/maps/search/?api=1&query=Taman+Wisata+Alam+Gunung+Tunak"
+                    target="_blank" rel="noopener noreferrer">
+
+                        <img src="assets/outdoor/kolam.jpeg" alt="Gunung Tunak" loading="lazy">
+
+                        <span class="destination-copy">
+                            <span class="destination-name">Gunung Tunak</span>
+                            <span class="destination-time">Nature & landscapes</span>
+                        </span>
+
+                        <span class="destination-arrow">→</span>
+                    </a>
+
+                    <a class="destination-card"
+                    href="https://www.google.com/maps/search/?api=1&query=Teluk+Awang+Lombok"
+                    target="_blank" rel="noopener noreferrer">
+
+                        <img src="assets/outdoor/workstation.jpeg" alt="Teluk Awang" loading="lazy">
+
+                        <span class="destination-copy">
+                            <span class="destination-name">Teluk Awang</span>
+                            <span class="destination-time">Coastal discovery</span>
+                        </span>
+
+                        <span class="destination-arrow">→</span>
+                    </a>
+
+                </div>
+
+
+                <!-- BOTTOM LINK -->
+                <a
+                    class="location-directions"
+                    href="https://maps.app.goo.gl/QtVHffbfXvTw5UzZA"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    VIEW LOCATION
+                    <span>↗</span>
+
+                </a>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GOOGLE REVIEWS — TANÉA GUESTHOUSE
+     ===================================================== -->
+
+<section class="reviews-section" id="reviews">
+
+    <div class="reviews-container">
+
+        <div class="reviews-header">
+
+             <p class="eyebrow">
+                 Review
+            </p>
+
+            <h2 class="reviews-heading">
+                guest comments
+            </h2>
+
+        </div>
+
+        <!-- REVIEWS WIDGET -->
+        <div class="reviews-widget-container">
+
+            <div data-reviewgrid="3bdbe149-69de-4b43-b138-4dd0feb7c036"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LOAD REVIEWS WIDGET -->
+<script src="https://reviewswidget.app/embed.js" async></script>
+
+<!-- END GOOGLE REVIEWS -->
+
+
+<!-- =====================================================
+     TANÉA GUESTHOUSE — FOOTER
+     LIVING ASIA INSPIRED
+     ===================================================== -->
+
+<footer class="footer" id="footer">
+
+    <!-- NEWSLETTER BANNER -->
+    <section class="footer-newsletter">
+
+        <div class="footer-newsletter-inner">
+
+            <div class="footer-newsletter-heading">
+
+                <span class="footer-eyebrow">
+                    STAY CONNECTED WITH TANÉA GUESTHOUSE
+                </span>
+
+                <h2>
+                    stay inspired with<br>
+                    stories, special moments<br>
+                    and lombok discoveries.
+                </h2>
+
+            </div>
+
+            <div class="footer-newsletter-form">
+
+                <form
+                    class="newsletter-form"
+                    action="#"
+                    method="post"
+                    onsubmit="return false;"
+                >
+
+                    <div class="newsletter-input-row">
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Your Email Address"
+                            aria-label="Your email address"
+                            required
+                        >
+
+                        <button type="submit">
+                            Subscribe
+                            <span aria-hidden="true">➤</span>
+                        </button>
+
+                    </div>
+
+                    <label class="newsletter-privacy">
+
+                        <input type="checkbox" required>
+
+                        <span>
+                            I agree to the Privacy Policy
+                        </span>
+
+                    </label>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMATION COLUMNS -->
+    <section class="footer-information">
+
+        <!-- ADDRESS -->
+        <div class="footer-info-item">
+
+            <span class="footer-info-label">
+                ADDRESS
+            </span>
+
+            <div class="footer-info-content">
+                <strong>TANEA Guest House</strong>
+
+                <p>
+                    Mertak, Lombok Tengah,<br>
+                    Nusa Tenggara Barat, Indonesia.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- PHONE -->
+        <div class="footer-info-item">
+
+            <span class="footer-info-label">
+                PHONE / WHATSAPP
+            </span>
+
+            <div class="footer-info-content footer-info-centered">
+
+                <a
+                    href="https://wa.me/6281311394071"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    +62 813-1139-4071
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="footer-info-item">
+
+            <span class="footer-info-label">
+                EMAIL
+            </span>
+
+            <div class="footer-info-content footer-info-centered">
+
+                <!-- Ganti dengan email resmi Tanéa -->
+                <a href="mailto:YOUR-EMAIL-HERE">
+                    Contact Tanéa Guesthouse
+                </a>
+
+            </div>
+
+        </div>
+
+            <!-- SOCIAL -->
+            <div class="footer-info-item">
+
+                <span class="footer-info-label">
+                    SOCIAL
+                </span>
+
+                <div class="footer-social-icons">
+
+                    <a
+                        href="https://www.instagram.com/tanea.official_/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram Tanéa Guesthouse"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="19"
+                            height="19"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <rect x="3" y="3" width="18" height="18" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </a>
+
+                </div>
+
+            </div>
+
+    </section>
+
+
+    <!-- COPYRIGHT -->
+    <div class="footer-copyright">
+
+        <span>
+            © 2026 Tanéa Guesthouse. All rights reserved.
+        </span>
+
+    </div>
+
+</footer>
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="js/language.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/experience-panel.js"></script>
+    <script src="js/reviews.js" defer></script>
+    <script src="js/room-language.js" defer></script>
+
+<!-- SCRIPT LUCIDE ICONS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        if (window.lucide) { lucide.createIcons(); }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,660 @@
+/* =========================================================
+   TANÉA GUESTHOUSE
+   GLOBAL STYLESHEET
+   MINIMAL ELEGANT — EDITORIAL SYSTEM
+   ========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL VARIABLES
+   ========================================================= */
+
+:root {
+
+    /* -------------------------------------
+       COLORS
+       ------------------------------------- */
+
+    --cream: #f3eee4;
+    --cream-light: #f8f5ee;
+    --cream-dark: #e7dfd1;
+
+    --forest: #18382c;
+    --forest-dark: #10291f;
+    --forest-soft: #244638;
+
+    --text: #20221e;
+    --text-soft: #6c6b62;
+    --text-light: #f4f0e7;
+
+    --line: rgba(32, 34, 30, 0.16);
+    --line-light: rgba(255, 255, 255, 0.25);
+
+    --accent: #b49a76;
+
+
+    /* -------------------------------------
+       TYPOGRAPHY — FONT FAMILIES
+       ------------------------------------- */
+
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-sans: "DM Sans", Arial, sans-serif;
+    --font-display: "Quicksand", sans-serif;
+
+    /* Backward compatibility */
+    --serif: var(--font-serif);
+    --sans: var(--font-sans);
+
+
+    /* -------------------------------------
+       TYPOGRAPHY — FONT WEIGHTS
+       ------------------------------------- */
+
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+
+    /* -------------------------------------
+       TYPOGRAPHY — HEADING HIERARCHY
+       ------------------------------------- */
+
+    /* Hero / primary heading */
+    --font-h1: clamp(42px, 5.5vw, 76px);
+
+    /* Section heading */
+    --font-h2: clamp(32px, 4vw, 54px);
+
+    /* Subsection heading */
+    --font-h3: clamp(22px, 2.5vw, 32px);
+
+    /* Small heading */
+    --font-h4: clamp(17px, 1.8vw, 22px);
+
+
+    /* -------------------------------------
+       TYPOGRAPHY — BODY
+       ------------------------------------- */
+
+    --font-body: 15px;
+    --font-body-small: 13px;
+    --font-caption: 11px;
+
+    --line-heading: 1.15;
+    --line-body: 1.8;
+
+
+    /* -------------------------------------
+       TYPOGRAPHY — EDITORIAL DISPLAY
+       ------------------------------------- */
+
+    --font-title: clamp(42px, 5vw, 68px);
+    --weight-title: 500;
+    --tracking-title: 0.12em;
+
+    --font-subtitle: clamp(28px, 3vw, 42px);
+    --weight-subtitle: 400;
+
+    --font-paragraph: 14px;
+    --line-paragraph: 1.8;
+
+    --font-tagline: 12px;
+    --weight-tagline: 400;
+
+
+    /* -------------------------------------
+       TYPOGRAPHY — HIERARCHY
+       ------------------------------------- */
+
+    /* Main decorative title */
+    --font-title: clamp(42px, 5vw, 68px);
+    --weight-title: 500;
+    --tracking-title: 0.30em;
+
+    /* Section subtitle */
+    --font-subtitle: clamp(28px, 3vw, 42px);
+    --weight-subtitle: 400;
+
+    /* Paragraph */
+    --font-paragraph: 14px;
+    --line-paragraph: 1.8;
+
+    /* Tagline */
+    --font-tagline: 12px;
+    --weight-tagline: 400;
+
+
+    /* -------------------------------------
+       LAYOUT
+       ------------------------------------- */
+
+    --container: 1320px;
+    --side-padding: clamp(24px, 5vw, 80px);
+
+    /* Tinggi navbar — dipakai navbar & scroll-margin anchor */
+    --nav-h: 82px;
+
+
+    /* -------------------------------------
+       TRANSITIONS
+       ------------------------------------- */
+
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+
+/* =========================================================
+   02. RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    /* Cegah browser HP memperbesar teks sendiri saat rotasi layar */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* Anchor (#about, #stay, ...) tidak tertutup navbar fixed */
+[id] {
+    scroll-margin-top: calc(var(--nav-h) + 8px);
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body,
+button,
+a {
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   03. TYPOGRAPHY SYSTEM
+   ========================================================= */
+
+
+/* MAIN TITLE
+   Reference: About — "philosophy"
+   Note: Apply .type-title only to matching title elements.
+*/
+
+.type-title {
+    font-family: var(--font-display);
+    font-size: var(--font-title);
+    font-weight: var(--weight-title);
+    font-style: normal;
+    letter-spacing: var(--tracking-title);
+    line-height: 1.3;
+    color: #80664e;
+}
+
+
+/* SECTION SUBTITLE */
+
+.type-subtitle {
+    font-family: var(--font-serif);
+    font-size: var(--font-subtitle);
+    font-weight: var(--weight-subtitle);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    color: var(--text);
+}
+
+
+/* BODY PARAGRAPH */
+
+.type-paragraph {
+    font-family: var(--font-sans);
+    font-size: var(--font-paragraph);
+    font-weight: 400;
+    line-height: var(--line-paragraph);
+    color: var(--text-soft);
+}
+
+
+/* TAGLINE */
+
+.type-tagline {
+    font-family: var(--font-serif);
+    font-size: var(--font-tagline);
+    font-weight: var(--weight-tagline);
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text-soft);
+}
+
+
+/* DEFAULT HEADINGS */
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.08;
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-size: clamp(34px, 4vw, 58px);
+}
+
+p {
+    color: var(--text-soft);
+}
+
+
+/* =========================================================
+   04. RESPONSIVE TYPOGRAPHY
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    :root {
+        --font-h1: clamp(34px, 9vw, 48px);
+        --font-h2: clamp(29px, 7vw, 38px);
+        --font-h3: clamp(21px, 5.5vw, 27px);
+        --font-h4: clamp(16px, 4.5vw, 20px);
+
+        --font-body: 14px;
+        --font-body-small: 12px;
+        --font-caption: 10px;
+
+        --font-title: clamp(30px, 8vw, 42px);
+        --font-subtitle: clamp(25px, 6.5vw, 34px);
+
+        --font-paragraph: 13px;
+        --font-tagline: 11px;
+    }
+
+    .type-title {
+        letter-spacing: 0.08em;
+        line-height: 1.25;
+    }
+
+    .type-subtitle {
+        line-height: 1.15;
+    }
+
+    .section-label {
+        margin-bottom: 14px;
+        font-size: 9px;
+        letter-spacing: 0.15em;
+    }
+}
+
+/* =========================================================
+   05. GLOBAL CONTAINER
+   ========================================================= */
+
+.hero-container,
+.discover-container,
+.stay-container,
+.comfort-container,
+.moments-container,
+.explore-container,
+.booking-container,
+.footer-container {
+
+    width: min(
+        calc(100% - (var(--side-padding) * 2)),
+        var(--container)
+    );
+
+    margin-inline: auto;
+
+}
+
+
+/* =========================================================
+   06. SECTION LABEL
+   ========================================================= */
+
+.section-label {
+
+    display: block;
+    margin-bottom: 18px;
+
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: var(--text-soft);
+
+}
+
+
+/* =========================================================
+   07. IMAGE PLACEHOLDER
+   ========================================================= */
+
+.image-placeholder {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9d0c1,
+            #b9ad9c
+        );
+
+    color: rgba(32, 34, 30, 0.5);
+
+    font-family: var(--font-sans);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   08. TEXT LINK
+   ========================================================= */
+
+.text-link {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid var(--text);
+
+    font-family: var(--font-sans);
+    font-size: 12px;
+
+    transition:
+        gap 0.35s var(--ease);
+
+}
+
+.text-link:hover {
+    gap: 20px;
+}
+
+
+/* =========================================================
+   09. BUTTON
+   ========================================================= */
+
+.btn {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    min-height: 46px;
+    padding: 0 22px;
+
+    border: 0;
+    border-radius: 999px;
+
+    background: var(--cream-light);
+    color: var(--forest);
+
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+
+    transition:
+        transform 0.35s var(--ease),
+        background 0.35s ease;
+
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: white;
+}
+
+
+/* =========================================================
+   10. SECTIONS
+   ========================================================= */
+
+section {
+    position: relative;
+}
+
+
+/* =========================================================
+   11. EDITORIAL SECTION DETAILS
+   Signature visual system
+   ========================================================= */
+
+.about-section,
+.scene-experience,
+.scene-stay,
+.scene-comfort,
+.scene-service,
+.scene-moments,
+.scene-dining,
+.scene-explore,
+.scene-booking {
+    position: relative;
+}
+
+
+/* ---------------------------------------------------------
+   LEFT EDITORIAL RAIL
+   --------------------------------------------------------- */
+
+.about-section::before,
+.scene-experience::before,
+.scene-stay::before,
+.scene-comfort::before,
+.scene-service::before,
+.scene-moments::before,
+.scene-dining::before,
+.scene-explore::before,
+.scene-booking::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 45px;
+    bottom: 45px;
+    left: 28px;
+
+    width: 1px;
+
+    background: rgba(24, 35, 29, 0.18);
+
+    pointer-events: none;
+
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT EDITORIAL RAIL
+   --------------------------------------------------------- */
+
+.about-section::after,
+.scene-experience::after,
+.scene-stay::after,
+.scene-comfort::after,
+.scene-service::after,
+.scene-moments::after,
+.scene-dining::after,
+.scene-explore::after,
+.scene-booking::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 45px;
+    bottom: 45px;
+    right: 28px;
+
+    width: 1px;
+
+    background: rgba(24, 35, 29, 0.08);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   12. SELECTION
+   ========================================================= */
+
+::selection {
+    background: var(--forest);
+    color: var(--cream-light);
+}
+
+
+/* =========================================================
+   13. SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--forest);
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   14. SMALL SCREEN — HIDE EDITORIAL RAILS
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .about-section::before,
+    .scene-experience::before,
+    .scene-stay::before,
+    .scene-comfort::before,
+    .scene-service::before,
+    .scene-moments::before,
+    .scene-dining::before,
+    .scene-explore::before,
+    .scene-booking::before {
+
+        left: 12px;
+        top: 30px;
+        bottom: 30px;
+
+    }
+
+
+    .about-section::after,
+    .scene-experience::after,
+    .scene-stay::after,
+    .scene-comfort::after,
+    .scene-service::after,
+    .scene-moments::after,
+    .scene-dining::after,
+    .scene-explore::after,
+    .scene-booking::after {
+
+        right: 12px;
+        top: 30px;
+        bottom: 30px;
+
+    }
+
+}
+
+
+/* =========================================================
+   END — GLOBAL STYLESHEET
+   ========================================================= */
+
+/* =========================================================
+   TANÉA — CONSISTENT SECTION TITLE CASE
+   Section and content headings use lowercase presentation.
+   ========================================================= */
+h1, h2, h3,
+.section-title,
+.experience-title,
+.reviews-heading {
+    text-transform: lowercase;
+    font-variant-caps: normal;
+}
+
+/* Keep headings readable and avoid excessive tracking. */
+h1, h2, h3 {
+    overflow-wrap: break-word;
+    text-wrap: balance;
+}
+
+@media (max-width: 640px) {
+    h1, h2, h3 {
+        letter-spacing: normal;
+    }
+}

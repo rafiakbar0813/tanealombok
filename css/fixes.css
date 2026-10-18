@@ -1,0 +1,233 @@
+/* =========================================================
+   TANÉA GUESTHOUSE — RESPONSIVE SAFETY NET
+   Dimuat PALING AKHIR di index.html.
+
+   Isi file ini sengaja kecil: hanya pengaman lintas-section.
+   Perbaikan spesifik ada di file sumbernya (navbar.css, about.css, dst).
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. JANGAN ADA HALAMAN YANG LEBIH LEBAR DARI LAYAR
+   Ornamen dekoratif sengaja "menggantung" keluar section
+   (right:-165px, left:-190px, dst). Kalau tidak dipotong, lebar
+   dokumen jadi > viewport → browser HP men-zoom-out halaman dan
+   posisi terasa geser saat di-zoom. `clip` memotong tanpa
+   membuat scroll container (vertikal tetap bebas).
+   --------------------------------------------------------- */
+
+main,
+footer {
+    overflow-x: clip;
+}
+
+
+/* ---------------------------------------------------------
+   2. MEDIA & TEKS TIDAK BOLEH MELEBAR
+   --------------------------------------------------------- */
+
+img,
+video,
+svg,
+iframe {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, p, a, li, span {
+    overflow-wrap: break-word;
+}
+
+
+/* ---------------------------------------------------------
+   3. HERO — stabil saat address bar HP muncul/hilang & saat zoom
+   svh = tinggi viewport TERKECIL (stabil), jadi hero tidak
+   "melompat" ketika address bar menyusut.
+   --------------------------------------------------------- */
+
+.hero {
+    height: 100vh;               /* fallback browser lama */
+    height: 100svh;
+    min-height: 560px;
+}
+
+@media (max-width: 600px) {
+
+    .hero-brand {
+        width: min(88%, 360px);
+        max-width: 88%;
+    }
+
+    .hero-main-logo {
+        width: clamp(130px, 46vw, 190px);
+    }
+
+    /* "a gentle stay for the soul" boleh turun baris di layar sempit,
+       daripada meluber keluar hero */
+    .hero-tagline {
+        white-space: normal;
+        max-width: 100%;
+        font-size: clamp(11px, 3.4vw, 14px);
+        letter-spacing: 0.22em;
+        text-wrap: balance;
+    }
+}
+
+/* HP landscape: tinggi layar sangat pendek */
+@media (max-height: 520px) and (orientation: landscape) {
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero-brand {
+        top: 38%;
+    }
+
+    .hero-main-logo {
+        width: clamp(90px, 16vw, 140px);
+    }
+
+    .hero-photo-marquee {
+        padding-bottom: 16px;
+    }
+
+    .marquee-photo {
+        height: 70px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   4. ORNAMEN DEKORATIF DI LAYAR KECIL
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .story-row-01 .story-visual::after,
+    .story-row-04 .story-visual::before {
+        display: none;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   5. JUDUL SECTION DI HP
+   Beberapa judul pakai font-size min 38px + letter-spacing .2–.3em
+   (dengan !important), terlalu lebar untuk layar 320–390px.
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .moments-heading h2,
+    .reviews-heading,
+    .experience-header h2,
+    .experience .experience-header h2 {
+        font-size: clamp(26px, 8vw, 36px) !important;
+        letter-spacing: 0.12em !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   6. STORY DI HP — foto memenuhi kotaknya, teks rata kiri
+   Sebelumnya kotak foto 480px tapi foto dibatasi max-height 380px
+   → muncul pita abu-abu di atas/bawah. Teks justify bikin celah
+   lebar di kolom sempit.
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .story-row .story-image {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .story-row .story-photo {
+        max-height: none;
+        height: 100%;
+    }
+
+    .story-row .story-intro-text,
+    .story-row .story-description p {
+        max-width: none;
+        text-align: left;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1100px) {
+
+    .story-row .story-image {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .story-row .story-photo {
+        max-height: none;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   7. EXPERIENCE — ornamen daun tidak boleh menimpa judul di HP
+   --------------------------------------------------------- */
+
+@media (max-width: 640px) {
+
+    .experience-container::after {
+        top: -86px;
+        right: -6px;
+        width: 100px;
+        height: 100px;
+        opacity: 0.28;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   8. PADDING GANDA DI STAY & EXPLORE (tablet/HP)
+   Section-nya sudah punya padding-inline, tapi container di dalamnya
+   masih mengurangi 2 x side-padding lagi → konten menjorok 44px
+   sementara section lain 22px.
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+    .stay-container,
+    .explore-container {
+        width: 100%;
+        max-width: 1320px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   9. EXPLORE / LOKASI — offset desktop jangan ikut ke tablet & HP
+   Peta (margin-left:-20px), sidebar (translateX -90px), daftar
+   destinasi (left:-90px) dan caption (translateX -130px) adalah
+   penyesuaian layout 2 kolom desktop. Di layar kecil bikin konten
+   bergeser keluar kiri dan terpotong.
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+    .live-map-wrapper {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .location-sidebar {
+        margin-top: 0;
+    }
+
+    .location-sidebar-intro {
+        transform: none;
+    }
+
+    .destination-guide {
+        left: 0;
+    }
+
+    .map-caption a {
+        transform: none;
+    }
+}

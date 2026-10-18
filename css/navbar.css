@@ -1,0 +1,630 @@
+/* =========================================================
+   TANÉA GUESTHOUSE
+   NAVBAR — WARM BROWN GLASS
+   ========================================================= */
+
+
+/* =========================================================
+   01. NAVBAR BASE
+   ========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    color: #F5EDE6;
+
+    /* Cokelat transparan, selaras dengan logo */
+    background: rgba(96, 72, 32, 0.30);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(245, 237, 230, 0.15);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+
+    transition:
+        background 0.45s ease,
+        color 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease,
+        backdrop-filter 0.45s ease;
+}
+
+
+/* =========================================================
+   02. NAVBAR INNER
+   ========================================================= */
+
+.navbar-inner {
+    width: min(100%, 1440px);
+    height: var(--nav-h);
+
+    margin: 0 auto;
+    padding: 0 42px;
+
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr) auto auto;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   03. LOGO
+   ========================================================= */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    color: #F5EDE6;
+    text-decoration: none;
+    line-height: 1;
+
+    transition: color 0.4s ease;
+}
+
+/* Tulisan tanéa */
+.logo-main {
+    font-family: "Quicksand", sans-serif;
+    font-size: 29px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+/* Tulisan GUESTHOUSE */
+.logo-sub {
+    margin-top: 5px;         /* Jarak vertikal dari tanéa */
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.30em;  /* Spasi antarhuruf GUESTHOUSE */
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   04. NAVIGATION MENU
+   ========================================================= */
+
+.navbar-menu {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 27px;
+}
+
+
+/* =========================================================
+   05. MENU LINKS
+   ========================================================= */
+
+.navbar-menu a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 36px;
+
+    color: #F5EDE6;
+    text-decoration: none;
+
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+
+    transition:
+        color 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.navbar-menu a:hover {
+    color: #D8C5A5;
+}
+
+
+/* =========================================================
+   06. ACTIVE MENU LINE
+   ========================================================= */
+
+.navbar-active-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 1px;
+    width: 0;
+
+    background: currentColor;
+
+    transition:
+        width 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+
+/* =========================================================
+   LANGUAGE SWITCHER — ID | EN
+   ========================================================= */
+.language-switch {
+    display: inline-flex;
+    align-items: center;
+    justify-self: end;
+    gap: 7px;
+    margin-right: 18px;
+    color: currentColor;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: .08em;
+    white-space: nowrap;
+}
+.language-option {
+    appearance: none;
+    border: 0;
+    padding: 5px 1px;
+    background: transparent;
+    color: currentColor;
+    opacity: .62;
+    font: inherit;
+    letter-spacing: inherit;
+    cursor: pointer;
+    transition: opacity .25s ease;
+}
+.language-option:hover,
+.language-option.is-active { opacity: 1; }
+.language-option.is-active { font-weight: 700; }
+.navbar.scrolled .language-switch { color: #604820; }
+
+/* =========================================================
+   07. BOOKING BUTTON
+   ========================================================= */
+
+.navbar-booking {
+    justify-self: end;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 118px;
+    height: 42px;
+
+    padding: 0 22px;
+
+    color: #604820;
+    background: #F5EDE6;
+
+    border: 1px solid #F5EDE6;
+    border-radius: 2px;
+
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition:
+        color 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.navbar-booking:hover {
+    color: #F5EDE6;
+    background: transparent;
+    border-color: #F5EDE6;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   08. NAVBAR SCROLLED
+   ========================================================= */
+
+.navbar.scrolled {
+    color: #604820;
+
+    /* Berubah menjadi krem saat halaman di-scroll */
+    background: rgba(245, 237, 230, 0.78);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(96, 72, 32, 0.12);
+    box-shadow: 0 5px 25px rgba(50, 35, 20, 0.07);
+}
+
+
+/* Logo ketika scroll */
+
+.navbar.scrolled .logo {
+    color: #604820;
+}
+
+
+/* Menu ketika scroll */
+
+.navbar.scrolled .navbar-menu a {
+    color: #604820;
+}
+
+.navbar.scrolled .navbar-menu a:hover {
+    color: #65705E;
+}
+
+
+/* Garis aktif ketika scroll */
+
+.navbar.scrolled .navbar-active-line {
+    background: #604820;
+}
+
+
+/* Booking ketika scroll */
+
+.navbar.scrolled .navbar-booking {
+    color: #F5EDE6;
+    background: #604820;
+    border-color: #604820;
+}
+
+.navbar.scrolled .navbar-booking:hover {
+    color: #604820;
+    background: transparent;
+    border-color: #604820;
+}
+
+
+/* =========================================================
+   09. MOBILE MENU TOGGLE
+   ========================================================= */
+
+.mobile-menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 10px;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 6px;
+
+    background: transparent;
+    border: 1px solid rgba(245, 237, 230, 0.5);
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+
+    width: 19px;
+    height: 1.5px;
+
+    background: #F5EDE6;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* Toggle ketika scroll */
+
+.navbar.scrolled .mobile-menu-toggle {
+    border-color: rgba(96, 72, 32, 0.45);
+}
+
+.navbar.scrolled .mobile-menu-toggle span {
+    background: #604820;
+}
+
+
+/* Animasi toggle menjadi X */
+
+.mobile-menu-toggle.is-active span:first-child,
+.mobile-menu-toggle.is-open span:first-child {
+    transform: translateY(3.75px) rotate(45deg);
+}
+
+.mobile-menu-toggle.is-active span:last-child,
+.mobile-menu-toggle.is-open span:last-child {
+    transform: translateY(-3.75px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   10. RESPONSIVE — SATU BREAKPOINT UNTUK COLLAPSE (<= 1100px)
+
+   Sebelumnya navbar punya 4 breakpoint berbeda (1180/1100/1050/900)
+   yang saling menimpa di navbar.css DAN responsive.css, sehingga
+   di 901–1100px (iPad landscape, HP landscape) grid-nya pecah
+   (4 item masuk 3 kolom) dan warna menu tidak terbaca.
+   Sekarang semua aturan mobile ada di sini saja.
+   ========================================================= */
+
+/* Laptop kecil: rapatkan sedikit, menu masih tampil penuh */
+@media (max-width: 1280px) and (min-width: 1101px) {
+    .navbar-inner {
+        padding: 0 28px;
+        grid-template-columns: 130px minmax(0, 1fr) auto auto;
+        column-gap: 12px;
+    }
+
+    .navbar-menu {
+        gap: 18px;
+    }
+
+    .navbar-menu a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    :root {
+        --nav-h: 72px;
+    }
+
+    .navbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        padding: 0 clamp(14px, 3.5vw, 28px);
+    }
+
+    .logo {
+        flex: 0 0 auto;
+        margin-right: auto;
+    }
+
+    .logo-main {
+        font-size: 27px;
+    }
+
+    .logo-sub {
+        font-size: 11px;
+        letter-spacing: 0.26em;
+    }
+
+    .language-switch {
+        flex: 0 0 auto;
+        margin: 0;
+        gap: 5px;
+    }
+
+    .navbar-booking {
+        flex: 0 0 auto;
+        min-width: 0;
+        height: 38px;
+        margin: 0;
+        padding: 0 14px;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        flex: 0 0 auto;
+    }
+
+
+    /* ---------- Dropdown menu ---------- */
+
+    .navbar-menu {
+        position: absolute;
+        top: 100%;          /* ikut tinggi navbar, tidak hard-code px */
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+
+        max-height: calc(100vh - var(--nav-h));
+        max-height: calc(100dvh - var(--nav-h));
+        overflow-y: auto;
+        overscroll-behavior: contain;
+
+        padding: 12px clamp(14px, 3.5vw, 28px) 24px;
+
+        background: rgba(96, 72, 32, 0.97);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+
+        border-bottom: 1px solid rgba(245, 237, 230, 0.15);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-8px);
+
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease,
+            transform 0.3s ease,
+            background 0.35s ease;
+    }
+
+    .navbar-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .navbar-menu a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        width: 100%;
+        height: auto;
+        min-height: 48px;           /* target sentuh >= 44px */
+        padding: 12px 0;
+
+        white-space: normal;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+
+        border-bottom: 1px solid rgba(245, 237, 230, 0.12);
+    }
+
+    .navbar-menu a:last-of-type {
+        border-bottom: 0;
+    }
+
+    .navbar-menu .navbar-active-line {
+        display: none;
+    }
+
+    .navbar.scrolled .navbar-menu {
+        background: rgba(245, 237, 230, 0.98);
+        border-bottom-color: rgba(96, 72, 32, 0.12);
+    }
+
+    .navbar.scrolled .navbar-menu a {
+        color: #604820;
+        border-bottom-color: rgba(96, 72, 32, 0.12);
+    }
+
+    /* Saat menu terbuka, navbar tidak boleh transparan di atas konten */
+    .navbar:has(.navbar-menu.is-open) {
+        background: rgba(96, 72, 32, 0.97);
+    }
+
+    .navbar.scrolled:has(.navbar-menu.is-open) {
+        background: rgba(245, 237, 230, 0.98);
+    }
+
+    /* Kunci scroll body saat menu terbuka tanpa bikin halaman loncat */
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+
+/* =========================================================
+   11. RESPONSIVE — PHONE (<= 600px)
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    :root {
+        --nav-h: 68px;
+    }
+
+    .navbar-inner {
+        gap: 8px;
+        padding: 0 14px;
+    }
+
+    .logo-main {
+        font-size: 24px;
+        letter-spacing: 0.1em;
+    }
+
+    .logo-sub {
+        margin-top: 4px;
+        font-size: 9px;
+        letter-spacing: 0.2em;
+    }
+
+    .language-switch {
+        gap: 4px;
+        font-size: 10px;
+    }
+
+    .navbar-booking {
+        height: 36px;
+        padding: 0 10px;
+        font-size: 8.5px;
+        letter-spacing: 0.04em;
+    }
+
+    .mobile-menu-toggle {
+        width: 38px;
+        height: 38px;
+        padding: 8px;
+    }
+}
+
+
+/* HP sangat kecil (iPhone SE lama, 320px): "PESAN SEKARANG" terlalu panjang */
+@media (max-width: 359px) {
+
+    .navbar-inner {
+        gap: 6px;
+        padding: 0 10px;
+    }
+
+    .logo-main {
+        font-size: 21px;
+    }
+
+    .logo-sub {
+        font-size: 8px;
+        letter-spacing: 0.16em;
+    }
+
+    .navbar-booking {
+        padding: 0 7px;
+        font-size: 8px;
+        letter-spacing: 0.02em;
+    }
+
+    .mobile-menu-toggle {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+
+/* =========================================================
+   12. ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar,
+    .navbar *,
+    .navbar-menu,
+    .navbar-menu a,
+    .navbar-booking,
+    .mobile-menu-toggle,
+    .mobile-menu-toggle span {
+        transition: none !important;
+        animation: none !important;
+    }
+}

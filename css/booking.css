@@ -1,0 +1,104 @@
+/* =========================================================
+   TANÉA GUESTHOUSE
+   BOOKING
+========================================================= */
+
+
+/* =========================================================
+   12. BOOKING
+========================================================= */
+
+.booking-section {
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+
+.booking-content {
+    max-width: 850px;
+}
+
+
+.booking-section .eyebrow {
+    color: #766e60;
+}
+
+
+.booking-section h2 {
+    margin-bottom: 35px;
+
+    font-size: clamp(55px, 7vw, 105px);
+}
+
+
+.booking-section p {
+    max-width: 450px;
+
+    margin: 0 auto 40px;
+
+    font-size: 14px;
+    color: #625d53;
+}
+
+
+.btn-booking {
+    gap: 30px;
+
+    padding: 17px 28px;
+
+    background: var(--text-dark);
+    color: var(--text);
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+
+.btn-booking span {
+    font-size: 18px;
+
+    transition: transform var(--transition);
+}
+
+
+.btn-booking:hover span {
+    transform: translateX(5px);
+}
+
+
+/* Booking section added to the main page */
+.booking-section {
+    position: relative;
+    isolation: isolate;
+    display: block;
+    min-height: 0;
+    padding: clamp(64px, 7vw, 100px) 24px;
+    background: #f1e9d2;
+    color: #302b22;
+    text-align: center;
+}
+.booking-content-new { width: min(100%, 820px); margin: 0 auto; }
+.booking-content-new .eyebrow {
+    display: block; margin-bottom: 18px; color: #73785a;
+    font-family: var(--font-sans); font-size: 10px; font-weight: 600;
+    letter-spacing: .24em; line-height: 1.6; text-transform: uppercase;
+}
+.booking-content-new h2 { margin: 0 auto 20px; max-width: 760px; }
+.booking-content-new p { margin: 0 auto 30px; max-width: 540px; color: #686157; }
+.booking-room-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.booking-room-actions .btn-booking { display: inline-flex; align-items: center; justify-content: center; gap: 24px; min-width: 190px; text-decoration: none; }
+.booking-room-actions .booking-button-secondary { background: transparent; color: #302b22; border: 1px solid rgba(48,43,34,.45); }
+.booking-room-actions .booking-button-secondary:hover { background: #302b22; color: #f1e9d2; }
+@media (max-width: 480px) { .booking-room-actions { flex-direction: column; align-items: stretch; } .booking-room-actions .btn-booking { width: 100%; } }
+
+#booking { scroll-margin-top: 90px; }

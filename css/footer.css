@@ -1,0 +1,469 @@
+
+/* =========================================================
+   TANÉA GUESTHOUSE
+   FOOTER — LIVING ASIA LAYOUT
+   ========================================================= */
+
+.footer {
+    --footer-brown: #604820;
+    --footer-dark: #11110f;
+    --footer-cream: #f1e9d2;
+    --footer-muted: #aaa397;
+    --footer-line: rgba(255, 255, 255, 0.10);
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: var(--footer-dark);
+    color: #fff;
+
+    font-family: var(--sans);
+    box-sizing: border-box;
+}
+
+.footer *,
+.footer *::before,
+.footer *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   01. NEWSLETTER BANNER
+   ========================================================= */
+
+.footer-newsletter {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    overflow: hidden;
+
+    background-color: var(--footer-brown);
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(25, 19, 12, 0.76),
+            rgba(25, 19, 12, 0.60)
+        ),
+        url("../assets/outdoor/basetanea1.jpeg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-bottom: 1px solid var(--footer-line);
+}
+
+.footer-newsletter-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+
+    width: 100%;
+    max-width: 1000px;
+    min-height: 290px;
+
+    margin: 0 auto;
+    padding: 45px 30px;
+}
+
+
+/* LEFT HEADING */
+
+.footer-newsletter-heading {
+    min-width: 0;
+}
+
+.footer-eyebrow {
+    display: block;
+    margin: 0 0 20px;
+
+    color: #e4d8c4;
+
+    font-size: 8px;
+    font-weight: 600;
+    line-height: 1.6;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.footer-newsletter-heading h2 {
+    margin: 0;
+
+    color: #fff;
+
+    font-family: var(--serif);
+    font-size: clamp(27px, 2.4vw, 34px);
+    font-weight: 400;
+    line-height: 1.14;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* RIGHT FORM */
+
+.footer-newsletter-form {
+    width: 100%;
+    min-width: 0;
+}
+
+.newsletter-form {
+    width: 100%;
+    margin: 0;
+}
+
+.newsletter-input-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.newsletter-input-row input[type="email"] {
+    flex: 1;
+    min-width: 0;
+
+    height: 43px;
+    padding: 0;
+
+    border: 0;
+    outline: 0;
+    border-radius: 0;
+
+    background: transparent;
+    color: #fff;
+
+    font-family: var(--sans);
+    font-size: 11px;
+}
+
+.newsletter-input-row input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.newsletter-input-row button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    flex-shrink: 0;
+    padding: 10px 0;
+
+    border: 0;
+    background: transparent;
+    color: #fff;
+
+    font-family: var(--serif);
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.newsletter-input-row button span {
+    font-family: var(--sans);
+    font-size: 13px;
+}
+
+.newsletter-privacy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 13px;
+
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 8px;
+    line-height: 1.6;
+
+    cursor: pointer;
+}
+
+.newsletter-privacy input {
+    width: 11px;
+    height: 11px;
+    margin: 0;
+
+    accent-color: var(--footer-brown);
+}
+
+
+/* =========================================================
+   02. INFORMATION COLUMNS
+   ========================================================= */
+
+.footer-information {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    width: 100%;
+    background: var(--footer-dark);
+}
+
+.footer-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+    min-height: 117px;
+
+    padding: 25px 14px 20px;
+
+    border-right: 1px solid var(--footer-line);
+}
+
+.footer-info-item:last-child {
+    border-right: 0;
+}
+
+.footer-info-label {
+    display: block;
+    margin-bottom: 13px;
+
+    color: #777c68;
+
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    letter-spacing: 0.13em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footer-info-content {
+    width: 100%;
+    color: #f5f2eb;
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.footer-info-content strong {
+    display: block;
+    margin-bottom: 2px;
+
+    color: #fff;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.footer-info-content p {
+    margin: 0;
+    color: #dedbd4;
+}
+
+.footer-info-content a {
+    color: #f5f2eb;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: opacity 0.25s ease;
+}
+
+.footer-info-content a:hover {
+    opacity: 0.7;
+}
+
+.footer-info-centered {
+    text-align: center;
+}
+
+
+/* SOCIAL */
+
+.footer-social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+}
+
+.footer-social-icons a {
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.25s ease;
+}
+
+.footer-social-icons a:hover {
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   03. COPYRIGHT
+   ========================================================= */
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 55px;
+    padding: 15px 30px;
+
+    border-top: 1px solid var(--footer-line);
+    background: var(--footer-dark);
+
+    color: #e0ded8;
+
+    font-size: 8px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   04. TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .footer-newsletter-inner {
+        gap: 28px;
+        min-height: 260px;
+        padding: 38px 26px;
+    }
+
+    .footer-newsletter-heading h2 {
+        font-size: clamp(25px, 3.4vw, 30px);
+    }
+
+    .footer-info-item {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+
+/* =========================================================
+   05. MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    .footer-newsletter-inner {
+        grid-template-columns: 1fr;
+        gap: 27px;
+
+        min-height: 0;
+        padding: 38px 24px 35px;
+    }
+
+    .footer-eyebrow {
+        margin-bottom: 15px;
+        font-size: 8px;
+    }
+
+    .footer-newsletter-heading h2 {
+        font-size: clamp(27px, 7vw, 34px);
+        line-height: 1.17;
+    }
+
+    .footer-newsletter-form {
+        max-width: 100%;
+    }
+
+    .footer-information {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-info-item {
+        min-height: 112px;
+        padding: 23px 14px 19px;
+
+        border-right: 1px solid var(--footer-line);
+        border-bottom: 1px solid var(--footer-line);
+    }
+
+    .footer-info-item:nth-child(2n) {
+        border-right: 0;
+    }
+
+    .footer-info-item:nth-last-child(-n + 2) {
+        border-bottom: 0;
+    }
+
+    .footer-info-content {
+        font-size: 9px;
+    }
+
+    .footer-copyright {
+        min-height: 48px;
+        padding: 14px 24px;
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   06. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .footer-newsletter-inner {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .footer-newsletter-heading h2 {
+        font-size: 26px;
+    }
+
+    .footer-info-item {
+        padding-right: 9px;
+        padding-left: 9px;
+    }
+
+    .footer-copyright {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+}
+
+/* INSTAGRAM ICON */
+.footer-social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.footer-social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    color: #F1E9D2;
+    transition: opacity 0.25s ease;
+}
+
+.footer-social-icons a:hover {
+    opacity: 0.65;
+}
+
+.footer-social-icons svg {
+    display: block;
+    width: 19px;
+    height: 19px;
+}
+
+/* FIX ADDRESS ALIGNMENT */
+
+.footer-information .footer-info-item:first-child
+.footer-info-content {
+    text-align: justify;
+    width: 100%;
+}
